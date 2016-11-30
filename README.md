@@ -10,4 +10,4 @@ Quick repo to support the discussion in [this d3-path issue](https://github.com/
 ## Benches
 
 - `npm run round`
-- `npm run path`: please edit `COMMANDCALLS` is hardcoded at the moment in `bench/path`, I'll add it as a command line option later on.
+- `npm run path`: at the moment the number of command calls (i.e. `.moveTo()`) is hardcoded, please edit `COMMANDCALLS` in `bench/path`, I'll add it as a command line option later on.
