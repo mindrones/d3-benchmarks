@@ -163,5 +163,6 @@ Path.prototype = path.prototype = {
 };
 
 export function path(digits) {
+  (digits = +digits).toFixed(digits); // Validate digits.
   return new Path(digits);
 };

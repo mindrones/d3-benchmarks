@@ -132,26 +132,26 @@ export function path() {
 
 export function pathCoerceFixed(digits) {
   var path = new Path;
-  // (digits = +digits).toFixed(digits); // Validate digits.
+  (digits = +digits).toFixed(digits); // Validate digits.
   path._format = function(x) { return +x.toFixed(digits); };
   return path;
 }
 export function pathFixed(digits) {
   var path = new Path;
-  // (digits = +digits).toFixed(digits); // Validate digits.
+  (digits = +digits).toFixed(digits); // Validate digits.
   path._format = function(x) { return x.toFixed(digits); };
   return path;
 }
 
 export function pathCoerceRound(digits) {
   var path = new Path;
-  // (digits = +digits).toFixed(digits); // Validate digits.
+  (digits = +digits).toFixed(digits); // Validate digits.
   path._format = function(x) { return round(+x, digits); };
   return path;
 }
 export function pathRound(digits) {
   var path = new Path;
-  // (digits = +digits).toFixed(digits); // Validate digits.
+  (digits = +digits).toFixed(digits); // Validate digits.
   path._format = function(x) { return round(x, digits); };
   return path;
 }
