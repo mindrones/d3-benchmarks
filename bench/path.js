@@ -17,7 +17,7 @@ function exec(funcName, digits, commandCalls) {
     }
     */
     let pathInitAST = esprima.parse(
-        `let p = path(${digits})`
+        digits ? `let p = path(${digits})` : `let p = path()`
     ).body[0];
 
     let commandAST = esprima.parse(
