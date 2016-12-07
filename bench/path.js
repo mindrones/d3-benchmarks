@@ -33,32 +33,16 @@ function exec(funcName, digits, commandCalls) {
 }
 
 function onComplete(funcName, digits, commandCalls) {
-    /*
-    return () => {
-        let p = path(digits)
-        p[funcName](10.1234567890, 10.1234567890)
-        // ...
-        console.log(p.toString())
+    // to check the result, append a console.log() to the exec() function
+
+    let afuncAST = esprima.parse(
+        exec(funcName, digits, commandCalls).toString()
+    ).body[0];
+
+    if (commandCalls < 5) {
+        let logAST = esprima.parse(`console.log(p.toString())`).body[0];
+        afuncAST.expression.body.body.push(logAST)
     }
-    */
-    let pathInitAST = esprima.parse(
-        `let p = path(${digits})`
-    ).body[0];
-
-    let commandAST = esprima.parse(
-        `p.${funcName}(10.1234567890, 10.1234567890)`
-    ).body[0];
-
-    var logAST = esprima.parse(
-        `console.log(p.toString())`
-    ).body[0];
-
-    let afuncAST = esprima.parse(`() => {}`).body[0];
-    afuncAST.expression.body.body.push(
-        pathInitAST,
-        ..._.map(_.range(commandCalls), () => commandAST)
-    )
-    if (commandCalls < 5) {afuncAST.expression.body.body.push(logAST)}
     return eval(escodegen.generate(afuncAST))
 }
 
