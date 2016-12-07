@@ -5,6 +5,7 @@ var Benchmark = require('benchmark');
 var d3 = require('../build/bundle')
 
 const COMMANDCALLS = 5
+const DIGITS = 4
 
 let path
 
@@ -57,27 +58,27 @@ new Benchmark.Suite('path')
     onStart: () => {path = d3.path.withFormat.path},
     onComplete: onComplete('moveTo', null, COMMANDCALLS)
 })
-.add('path.withFormat.pathCoerceFixed(2).moveTo', exec('moveTo', 2, COMMANDCALLS), {
+.add('path.withFormat.pathCoerceFixed(2).moveTo', exec('moveTo', DIGITS, COMMANDCALLS), {
     onStart: () => {path = d3.path.withFormat.pathCoerceFixed},
-    onComplete: onComplete('moveTo', 2, COMMANDCALLS)
+    onComplete: onComplete('moveTo', DIGITS, COMMANDCALLS)
 })
-.add('path.withFormat.pathFixed(2).moveTo', exec('moveTo', 2, COMMANDCALLS), {
+.add('path.withFormat.pathFixed(2).moveTo', exec('moveTo', DIGITS, COMMANDCALLS), {
     onStart: () => {path = d3.path.withFormat.pathFixed},
-    onComplete: onComplete('moveTo', 2, COMMANDCALLS)
+    onComplete: onComplete('moveTo', DIGITS, COMMANDCALLS)
 })
-.add('path.withFormat.pathCoerceRound(2).moveTo', exec('moveTo', 2, COMMANDCALLS), {
+.add('path.withFormat.pathCoerceRound(2).moveTo', exec('moveTo', DIGITS, COMMANDCALLS), {
     onStart: () => {path = d3.path.withFormat.pathCoerceRound},
-    onComplete: onComplete('moveTo', 2, COMMANDCALLS)
+    onComplete: onComplete('moveTo', DIGITS, COMMANDCALLS)
 })
-.add('path.withFormat.pathRound(2).moveTo', exec('moveTo', 2, COMMANDCALLS), {
+.add('path.withFormat.pathRound(2).moveTo', exec('moveTo', DIGITS, COMMANDCALLS), {
     onStart: () => {path = d3.path.withFormat.pathRound},
-    onComplete: onComplete('moveTo', 2, COMMANDCALLS)
+    onComplete: onComplete('moveTo', DIGITS, COMMANDCALLS)
 })
 .add('path.withIf.path().moveTo', exec('moveTo', null, COMMANDCALLS), {
     onStart: () => {path = d3.path.withIf.path},
     onComplete: onComplete('moveTo', null, COMMANDCALLS)
 })
-.add('path.withIf.path(2).moveTo', exec('moveTo', 2, COMMANDCALLS), {
+.add('path.withIf.path(2).moveTo', exec('moveTo', DIGITS, COMMANDCALLS), {
     onStart: () => {path = d3.path.withIf.path},
     onComplete: onComplete('moveTo', null, COMMANDCALLS)
 })
@@ -90,7 +91,7 @@ new Benchmark.Suite('path')
 //     onStart: () => {path = d3.path.withIf.path},
 //     onComplete: onComplete('moveTo4')
 // })
-// .add('path.withIf.path(2).moveTo4', exec('moveTo4', 2, COMMANDCALLS), {
+// .add('path.withIf.path(2).moveTo4', exec('moveTo4', DIGITS, COMMANDCALLS), {
 //     onStart: () => {path = d3.path.withIf.path},
 //     onComplete: onComplete('moveTo4', 2)
 // })
@@ -98,7 +99,7 @@ new Benchmark.Suite('path')
 //     onStart: () => {path = d3.path.withIf.path},
 //     onComplete: onComplete('moveTo5')
 // })
-// .add('path.withIf.path(2).moveTo5', exec('moveTo5', 2, COMMANDCALLS), {
+// .add('path.withIf.path(2).moveTo5', exec('moveTo5', DIGITS, COMMANDCALLS), {
 //     onStart: () => {path = d3.path.withIf.path},
 //     onComplete: onComplete('moveTo5', 2)
 // })
@@ -106,7 +107,7 @@ new Benchmark.Suite('path')
 //     onStart: () => {path = d3.path.withIf.path},
 //     onComplete: onComplete('moveTo6')
 // })
-// .add('path.withIf.path(2).moveTo6', exec('moveTo6', 2, COMMANDCALLS), {
+// .add('path.withIf.path(2).moveTo6', exec('moveTo6', DIGITS, COMMANDCALLS), {
 //     onStart: () => {path = d3.path.withIf.path},
 //     onComplete: onComplete('moveTo6', 2)
 // })
@@ -114,7 +115,7 @@ new Benchmark.Suite('path')
 //     onStart: () => {path = d3.path.withIf.path},
 //     onComplete: onComplete('moveTo7')
 // })
-// .add('path.withIf.path(2).moveTo7', exec('moveTo7', 2, COMMANDCALLS), {
+// .add('path.withIf.path(2).moveTo7', exec('moveTo7', DIGITS, COMMANDCALLS), {
 //     onStart: () => {path = d3.path.withIf.path},
 //     onComplete: onComplete('moveTo7', 2)
 // })
