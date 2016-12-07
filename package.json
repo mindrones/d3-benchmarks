@@ -4,8 +4,8 @@
   "main": "src/index.js",
   "scripts": {
     "build": "rollup -c",
-    "path": "node bench/path.js ",
-    "round": "node bench/round.js "
+    "path": "node bench/path.js",
+    "round": "node bench/round.js"
   },
   "author": "Luca Bonavita (mindrones.com)",
   "dependencies": {
@@ -16,6 +16,7 @@
     "lodash": "^4.17.2"
   },
   "devDependencies": {
+    "rollup": "^0.36.4",
     "rollup-plugin-buble": "^0.14.0"
   }
 }

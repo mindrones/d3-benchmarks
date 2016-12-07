@@ -46,9 +46,7 @@ function onComplete(funcName, digits, commandCalls) {
     return eval(escodegen.generate(afuncAST))
 }
 
-var suite = new Benchmark.Suite('path');
-
-suite
+new Benchmark.Suite('path')
 
 // moveTo
 .add('path.current.path().moveTo', exec('moveTo', null, COMMANDCALLS), {
