@@ -1,10 +1,20 @@
-var _ = require('lodash');
-var esprima = require('esprima');
-var escodegen = require('escodegen');
-var benchmark = require('benchmark');
-var d3 = require('../build/bundle')
+/*
+node --expose-gc bench/path.js
+to be run as idle as possible:
+  - no wifi
+  - no or limited amount of open apps
+  - no or limited user activities
+*/
 
-const CALLS = 4
+const fs = require('fs');
+const _ = require('lodash');
+const esprima = require('esprima');
+const escodegen = require('escodegen');
+const benchmark = require('benchmark');
+const d3 = require('../build/bundle')
+
+const RESULTS_PATH = './data/path.json'
+const MAXEXP = 4    // test with 1, 10, 100, ..., 10^MAXEXP command invocations
 const DIGITS = 5
 const commands = [
     'moveTo',
@@ -15,40 +25,91 @@ const commands = [
     'arcTo',
     'arc'
 ]
-const funcs = {
+
+// implementation / digits to be used as argument of path()
+const implementations = {
     'path.current.path': [null],
     'path.withFormat.path': [null],
-    // 'path.withFormat.pathCoerceFixed': [DIGITS],
-    // 'path.withFormat.pathFixed': [DIGITS],
-    // 'path.withFormat.pathCoerceRound': [DIGITS],
     'path.withFormat.pathRound': [DIGITS],
+    'path.withFormat.pathCoerceFixed': [DIGITS],
+    'path.withFormat.pathFixed': [DIGITS],
+    'path.withFormat.pathCoerceRound': [DIGITS],
     'path.withIf.path': [null, DIGITS],
 }
 
-let path
+// vars to accumulate benchmarks data
+let testData
+let results = []
 
+// these will change at each benchmark: we want them to be at module level
+// so that they won't be garbage collected until we explicitly call global.gc()
+// (which is why we run this bench with the flag `--expose-gc`)
+let path, p
+
+// setup the suite
+console.log(`Benchmarks setup...`)
 let suite = new benchmark.Suite('path')
 .on('start', function() {
-    console.log(`Calling ${CALLS} command${CALLS > 1 ? 's' : ''} per test...`)
+    console.log(`Benchmarking...`)
 })
 .on('cycle', function(event) {
-    console.log(String(event.target));
+    console.log(`Done.`)
 })
 .on('complete', () => {
-    console.log(`Done`)
+    fs.writeFile(RESULTS_PATH, JSON.stringify(results, null, 2), err => {
+        if (err) {throw err}
+        console.log('Saved results in:', RESULTS_PATH)
+    })
 })
 
+// generate test functions and add the tests to the suite
+// this can take a while because some of them have 10^MAXEXP lines of code
 _.each(commands, command => {
-    _.each(funcs, (args, name) => {
+    _.each(implementations, (args, impl) => {
         _.each(args, digits => {
-            suite.add(
-                `${name}(${digits ? digits : ''}).${command}`,    // 'path.current.path(2).moveTo'
-                exec(command, digits, CALLS),                  // exec(moveTo, 2, 3)
-                {
-                    onStart: () => {path = _.get(d3, name)},
-                    onComplete: onComplete(command, digits, CALLS)
-                }
-            )
+            _.each(_.range(MAXEXP + 1), exp => {
+                let calls = Math.pow(10, exp)
+                suite.add(
+                    `${impl}(${digits ? digits : ''}).${command}.${exp}`,   // 'path.current.path(2).moveTo.5'
+                    exec(command, digits, calls),                           // exec(moveTo, 2, 5)
+                    {
+                        onStart: () => {
+                            console.log(`Executing ${impl}(${digits ? digits : ''}).${command}.${exp}...`)
+
+                            path = _.get(d3, impl)
+                            testData = {
+                                impl: impl,
+                                digits: digits,
+                                command: command,
+                                calls: calls,
+                                heap: []
+                            }
+                            p = null
+                        },
+                        onCycle: (event) => {
+                            // garbage collect everything we can, apart from `p`
+                            global.gc()
+                            let heapBeforeGC = process.memoryUsage().heapUsed
+
+                            // free `p`
+                            p = null
+
+                            // should garbage collect only `p`
+                            global.gc()
+                            let heapAfterGC = process.memoryUsage().heapUsed
+                            testData.heap.push(heapBeforeGC - heapAfterGC)
+                        },
+                        onComplete: (event) => {
+                            testData.heap = _.reduce(testData.heap, function(sum, x) {
+                                return sum + x;
+                            }) / testData.heap.length
+                            testData.duration = event.target.times.period   // secs
+                            results.push(testData)
+                            checkOutput(command, digits, calls)()
+                        }
+                    }
+                )
+            })
         })
     })
 })
@@ -56,26 +117,28 @@ _.each(commands, command => {
 suite.run()
 
 
-function exec(funcName, digits, commandCalls) {
-    let afuncAST = esprima.parse(`() => {}`).body[0];
-    let initCode = digits ? `let p = path(${digits});` : `let p = path();`
-    let commandCode
+function exec(command, digits, commandCalls) {
+    let afuncAST = esprima.parse(`() => {}`).body[0]
 
+    // make sure `p` is global, don't use `let p = ...`
+    let initCode = digits ? `p = path(${digits});` : `p = path();`
+
+    let commandCode
     if (_.includes([
         'moveTo',
         'lineTo',
         'quadraticCurveTo',
         'rect',
         'bezierCurveTo'
-    ], funcName)) {
-        switch (funcName) {
+    ], command)) {
+        switch (command) {
             case 'moveTo':
             case 'lineTo':
-                commandCode = `p.${funcName}(10.1234567890, 10.1234567890);`
+                commandCode = `p.${command}(10.1234567890, 10.1234567890);`
                 break;
             case 'quadraticCurveTo':
             case 'rect':
-                commandCode = `p.${funcName}(10.1234567890, 10.1234567890, 10.1234567890, 10.1234567890);`
+                commandCode = `p.${command}(10.1234567890, 10.1234567890, 10.1234567890, 10.1234567890);`
                 break;
             case 'bezierCurveTo':
                 commandCode = `p.bezierCurveTo(10.1234567890, 10.1234567890, 10.1234567890, 10.1234567890, 10.1234567890, 10.1234567890)`
@@ -88,7 +151,7 @@ function exec(funcName, digits, commandCalls) {
             esprima.parse(initCode),
             ..._.map(_.range(commandCalls), () => commandAST)
         )
-    } else if (funcName === 'arcTo') {
+    } else if (command === 'arcTo') {
         // arcs through points [0,0], [0.5,0.5], [1,0] and back
         // shifted of [delta, delta] to get numbers with digits
 
@@ -106,7 +169,7 @@ function exec(funcName, digits, commandCalls) {
                 return esprima.parse(commandCode).body[0];
             })
         )
-    } else if (funcName === 'arc') {
+    } else if (command === 'arc') {
         // arc with center [1,-1] starting from [0,0] to [2,0] and back
         // shifted of [delta, delta] to get numbers with digits
         let delta = 0.0123456789
@@ -129,17 +192,16 @@ function exec(funcName, digits, commandCalls) {
     return eval(escodegen.generate(afuncAST))
 }
 
-function onComplete(funcName, digits, commandCalls) {
-    // to check the result, append a console.log() to the exec() function
-
+// to check the result, append a console.log() to the exec() function
+function checkOutput(command, digits, commandCalls) {
     let afuncAST = esprima.parse(
-        exec(funcName, digits, commandCalls).toString()
+        exec(command, digits, commandCalls).toString()
     ).body[0];
 
-    if (commandCalls < 5) {
+    if (commandCalls <= 10) {
+        console.log('checkOutput...')
         let logAST = esprima.parse(`console.log(p.toString())`).body[0];
         afuncAST.expression.body.body.push(logAST)
     }
-    console.log(funcName, escodegen.generate(afuncAST))
     return eval(escodegen.generate(afuncAST))
 }
