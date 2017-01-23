@@ -9,27 +9,6 @@ Quick repo to support the discussion in [this d3-path issue](https://github.com/
 
 ## Benches
 
-### round
-
-Compare different rounding functions, run with: `npm run round`.
-
-Tested implementations:
-
-  - [mbostock's round](https://github.com/d3/d3-format/issues/32)
-  - [MDN php-like round](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round#PHP-Like_rounding_Method)
-
-Example output:
-
-```bash
-$ npm run build; npm run round
-Executing round tests...
-roundMDN x 74,351,259 ops/sec ±1.68% (84 runs sampled)
-round x 73,044,375 ops/sec ±1.65% (80 runs sampled)
-Done
-```
-
-The current two implementations have very similar speed.
-
 ### path
 
 Compare different implementations of d3's `path`, run with: `npm run path`.
@@ -124,4 +103,38 @@ Results are saved in `./data/path.json` as a list of objects like:
 - `command`: executed path command ('moveTo', 'lineTo', etc)
 - `calls`: how many times we invoked the command on the path instance `p`
 - `heap`: heap memory used by the `p` instance after calling the `coommand` `calls` times, in bytes
+- `duration`: mean test execution time, in seconds
+
+
+### round
+
+Compare two rounding functions and `.toFixed()`, also coercing the input (be it a number or a string) to a number, to check the coercion impact on speed.
+
+Tested implementations:
+
+  - [mbostock's round](https://github.com/d3/d3-format/issues/32)
+  - [MDN php-like round](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round#PHP-Like_rounding_Method)
+
+Run with: `npm run round`.
+
+Results are saved in `./data/rounding.json` as a list of objects like:
+
+```js
+{
+  "impl": "round",
+  "transform": null,
+  "digits": 0,
+  "duration": 1.5478552534985366e-8
+},
+```
+
+- `impl`: name of the rounding implementation
+- `transform`: input coercion
+  - null: no coercion
+  - 'CoerceNumber': `+N`
+  - 'CoerceString': `+(N.toString())`
+- `digits`: digits we passed to the rounding function
+  - `round(N, digits)`,
+  - `roundMDN(N, digits)`,
+  - `N.toFixed(digits)`
 - `duration`: mean test execution time, in seconds
