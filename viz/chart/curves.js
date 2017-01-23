@@ -30,7 +30,7 @@ Component.prototype.updateCurves = function() {
     .style('fill', d => this.implColor(d.impl))
     .append('textPath')
     .attr('startOffset', '90%')
-    .attr('href', d => `#${d.domID}`)
+    .attr('xlink:href', d => `#${d.domID}`)
     .text(d => d.id)
 
     this.curve = curveEnter.merge(this.curve)
