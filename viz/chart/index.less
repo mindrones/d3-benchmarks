@@ -60,6 +60,8 @@
                 }
             }
 
+            @rangeLabelColor: lighten(black, 60%);
+
             .label {
                 fill: black;
                 stroke: none;
@@ -73,11 +75,11 @@
 
                 &.min {
                     text-anchor: start;
-                    font-style: italic;
+                    fill: @rangeLabelColor;
                 }
                 &.max {
                     text-anchor: end;
-                    font-style: italic;
+                    fill: @rangeLabelColor;
                 }
             }
         }
