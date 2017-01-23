@@ -1,0 +1,218 @@
+[
+  {
+    "impl": "round",
+    "transform": null,
+    "digits": 0,
+    "duration": 1.5478552534985366e-8
+  },
+  {
+    "impl": "round",
+    "transform": null,
+    "digits": 5,
+    "duration": 1.5977351977287934e-8
+  },
+  {
+    "impl": "round",
+    "transform": null,
+    "digits": 10,
+    "duration": 1.6534258116654933e-8
+  },
+  {
+    "impl": "round",
+    "transform": null,
+    "digits": 15,
+    "duration": 1.5641545992664062e-8
+  },
+  {
+    "impl": "round",
+    "transform": "CoerceNumber",
+    "digits": 0,
+    "duration": 1.536461834537893e-8
+  },
+  {
+    "impl": "round",
+    "transform": "CoerceNumber",
+    "digits": 5,
+    "duration": 1.7060544964127023e-8
+  },
+  {
+    "impl": "round",
+    "transform": "CoerceNumber",
+    "digits": 10,
+    "duration": 1.586134681073694e-8
+  },
+  {
+    "impl": "round",
+    "transform": "CoerceNumber",
+    "digits": 15,
+    "duration": 1.575603096778826e-8
+  },
+  {
+    "impl": "round",
+    "transform": "CoerceString",
+    "digits": 0,
+    "duration": 1.5284206065782193e-8
+  },
+  {
+    "impl": "round",
+    "transform": "CoerceString",
+    "digits": 5,
+    "duration": 1.5749985193735745e-8
+  },
+  {
+    "impl": "round",
+    "transform": "CoerceString",
+    "digits": 10,
+    "duration": 1.562874961546658e-8
+  },
+  {
+    "impl": "round",
+    "transform": "CoerceString",
+    "digits": 15,
+    "duration": 1.5657167562737306e-8
+  },
+  {
+    "impl": "roundMDN",
+    "transform": null,
+    "digits": 0,
+    "duration": 1.450359351089088e-8
+  },
+  {
+    "impl": "roundMDN",
+    "transform": null,
+    "digits": 5,
+    "duration": 1.4451925870556859e-8
+  },
+  {
+    "impl": "roundMDN",
+    "transform": null,
+    "digits": 10,
+    "duration": 1.4274372678482219e-8
+  },
+  {
+    "impl": "roundMDN",
+    "transform": null,
+    "digits": 15,
+    "duration": 1.4393497266734521e-8
+  },
+  {
+    "impl": "roundMDN",
+    "transform": "CoerceNumber",
+    "digits": 0,
+    "duration": 1.4569680130963163e-8
+  },
+  {
+    "impl": "roundMDN",
+    "transform": "CoerceNumber",
+    "digits": 5,
+    "duration": 1.4082099685837212e-8
+  },
+  {
+    "impl": "roundMDN",
+    "transform": "CoerceNumber",
+    "digits": 10,
+    "duration": 1.3886912575203212e-8
+  },
+  {
+    "impl": "roundMDN",
+    "transform": "CoerceNumber",
+    "digits": 15,
+    "duration": 1.396974892845556e-8
+  },
+  {
+    "impl": "roundMDN",
+    "transform": "CoerceString",
+    "digits": 0,
+    "duration": 1.4050605949870337e-8
+  },
+  {
+    "impl": "roundMDN",
+    "transform": "CoerceString",
+    "digits": 5,
+    "duration": 1.4690637856826566e-8
+  },
+  {
+    "impl": "roundMDN",
+    "transform": "CoerceString",
+    "digits": 10,
+    "duration": 1.4588132629362375e-8
+  },
+  {
+    "impl": "roundMDN",
+    "transform": "CoerceString",
+    "digits": 15,
+    "duration": 1.4451615175163754e-8
+  },
+  {
+    "impl": "fixed",
+    "transform": null,
+    "digits": 0,
+    "duration": 3.4691750980863377e-7
+  },
+  {
+    "impl": "fixed",
+    "transform": null,
+    "digits": 5,
+    "duration": 3.7675478035984576e-7
+  },
+  {
+    "impl": "fixed",
+    "transform": null,
+    "digits": 10,
+    "duration": 3.8248522973049554e-7
+  },
+  {
+    "impl": "fixed",
+    "transform": null,
+    "digits": 15,
+    "duration": 4.193853086654978e-7
+  },
+  {
+    "impl": "fixed",
+    "transform": "CoerceNumber",
+    "digits": 0,
+    "duration": 3.346735656669211e-7
+  },
+  {
+    "impl": "fixed",
+    "transform": "CoerceNumber",
+    "digits": 5,
+    "duration": 3.653331792865546e-7
+  },
+  {
+    "impl": "fixed",
+    "transform": "CoerceNumber",
+    "digits": 10,
+    "duration": 3.7477098853450743e-7
+  },
+  {
+    "impl": "fixed",
+    "transform": "CoerceNumber",
+    "digits": 15,
+    "duration": 3.972308549892275e-7
+  },
+  {
+    "impl": "fixed",
+    "transform": "CoerceString",
+    "digits": 0,
+    "duration": 3.3094010870576886e-7
+  },
+  {
+    "impl": "fixed",
+    "transform": "CoerceString",
+    "digits": 5,
+    "duration": 3.6704845222098596e-7
+  },
+  {
+    "impl": "fixed",
+    "transform": "CoerceString",
+    "digits": 10,
+    "duration": 3.755182609688008e-7
+  },
+  {
+    "impl": "fixed",
+    "transform": "CoerceString",
+    "digits": 15,
+    "duration": 3.99749975190138e-7
+  }
+]
