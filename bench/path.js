@@ -1,21 +1,22 @@
 /*
 node --expose-gc bench/path.js
 to be run as idle as possible:
-  - no wifi
-  - no or limited amount of open apps
-  - no or limited user activities
+  - charger connected
+  - no wifi | sleep mode
+  - no or limited amount of open apps | user activities
 */
 
-const fs = require('fs');
-const _ = require('lodash');
-const esprima = require('esprima');
-const escodegen = require('escodegen');
+const fs = require('fs')
+const _ = require('lodash')
+const esprima = require('esprima')
+const escodegen = require('escodegen')
 const benchmark = require('benchmark');
 const d3 = require('../build/bundle')
 
 const RESULTS_PATH = './data/path.json'
 const MAXEXP = 4    // test with 1, 10, 100, ..., 10^MAXEXP command invocations
-const DIGITS = 5
+const MAXDIGITS = -Math.floor(Math.log10(Number.EPSILON))   // 16 on this machine
+const DIGITS_STEP = 5   // 16-1 = 15 -> digits 0, 5, 10, 15
 const commands = [
     'moveTo',
     'lineTo',
@@ -29,12 +30,12 @@ const commands = [
 // implementation / digits to be used as argument of path()
 const implementations = {
     'path.current.path': [null],
+    'path.withIf.path': [null, MAXDIGITS],
     'path.withFormat.path': [null],
-    'path.withFormat.pathRound': [DIGITS],
-    'path.withFormat.pathCoerceFixed': [DIGITS],
-    'path.withFormat.pathFixed': [DIGITS],
-    'path.withFormat.pathCoerceRound': [DIGITS],
-    'path.withIf.path': [null, DIGITS],
+    'path.withFormat.pathRound': [MAXDIGITS],
+    // 'path.withFormat.pathCoerceRound': [MAXDIGITS],
+    // 'path.withFormat.pathFixed': [MAXDIGITS],
+    // 'path.withFormat.pathCoerceFixed': [MAXDIGITS],
 }
 
 // vars to accumulate benchmarks data
@@ -65,16 +66,21 @@ let suite = new benchmark.Suite('path')
 // generate test functions and add the tests to the suite
 // this can take a while because some of them have 10^MAXEXP lines of code
 _.each(commands, command => {
-    _.each(implementations, (args, impl) => {
-        _.each(args, digits => {
+    _.each(implementations, (maxDigits, impl) => {
+        _.chain(maxDigits)
+        .map(n => _.isNumber(n) ? _.range(0, n, DIGITS_STEP) : n)
+        .flatten()
+        .each(digits => {
             _.each(_.range(MAXEXP + 1), exp => {
                 let calls = Math.pow(10, exp)
+                let callsExp = calls.toExponential()
+                let digitsString = _.isNull(digits) ? '' : digits
                 suite.add(
-                    `${impl}(${digits ? digits : ''}).${command}.${exp}`,   // 'path.current.path(2).moveTo.5'
+                    `${impl}(${digitsString}).${command}.${callsExp}`,   // 'path.current.path(2).moveTo.5e2'
                     exec(command, digits, calls),                           // exec(moveTo, 2, 5)
                     {
                         onStart: () => {
-                            console.log(`Executing ${impl}(${digits ? digits : ''}).${command}.${exp}...`)
+                            console.log(`Executing ${impl}(${digitsString}).${command}.${callsExp}...`)
 
                             path = _.get(d3, impl)
                             testData = {
@@ -100,17 +106,24 @@ _.each(commands, command => {
                             testData.heap.push(heapBeforeGC - heapAfterGC)
                         },
                         onComplete: (event) => {
-                            testData.heap = _.reduce(testData.heap, function(sum, x) {
-                                return sum + x;
-                            }) / testData.heap.length
+                            testData.heap = _.reduce(testData.heap,
+                                (sum, x) => sum + x
+                            ) / testData.heap.length
                             testData.duration = event.target.times.period   // secs
                             results.push(testData)
                             checkOutput(command, digits, calls)()
+                        },
+                        onError: (event) => {
+                            // FIXME log arrors and save in file
+                            console.log('*************************************')
+                            console.log(event)
+                            console.log('*************************************')
                         }
                     }
                 )
             })
         })
+        .value()
     })
 })
 
@@ -121,9 +134,10 @@ function exec(command, digits, commandCalls) {
     let afuncAST = esprima.parse(`() => {}`).body[0]
 
     // make sure `p` is global, don't use `let p = ...`
-    let initCode = digits ? `p = path(${digits});` : `p = path();`
+    let initCode = _.isNull(digits) ? `p = path();` : `p = path(${digits});`
 
     let commandCode
+    const N = 10.1234567890123456   // 16 digits as per MAXDIGITS on this machine
     if (_.includes([
         'moveTo',
         'lineTo',
@@ -134,14 +148,14 @@ function exec(command, digits, commandCalls) {
         switch (command) {
             case 'moveTo':
             case 'lineTo':
-                commandCode = `p.${command}(10.1234567890, 10.1234567890);`
+                commandCode = `p.${command}(${N},${N});`
                 break;
             case 'quadraticCurveTo':
             case 'rect':
-                commandCode = `p.${command}(10.1234567890, 10.1234567890, 10.1234567890, 10.1234567890);`
+                commandCode = `p.${command}(${N},${N},${N},${N});`
                 break;
             case 'bezierCurveTo':
-                commandCode = `p.bezierCurveTo(10.1234567890, 10.1234567890, 10.1234567890, 10.1234567890, 10.1234567890, 10.1234567890)`
+                commandCode = `p.bezierCurveTo(${N},${N},${N},${N},${N},${N},${N},${N})`
                 break;
             default:
                 break;
@@ -155,7 +169,7 @@ function exec(command, digits, commandCalls) {
         // arcs through points [0,0], [0.5,0.5], [1,0] and back
         // shifted of [delta, delta] to get numbers with digits
 
-        let delta = 0.0123456789
+        const delta = 0.1234567890123456
         initCode += `p.moveTo(${1+delta},${0+delta});`
         let [x1, y1] = [0.5 + delta, 0.5 + delta]
         let y2 = 0 + delta
