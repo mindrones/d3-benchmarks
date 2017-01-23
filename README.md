@@ -34,6 +34,8 @@ The current two implementations have very similar speed.
 
 Compare different implementations of d3's `path`, run with: `npm run path`.
 
+**Please checkout the current results on this [interactive chart](https://mindrones.github.io/d3-benchmarks/)**
+
 Tested implementations of `path()`:
 
 - [current](https://github.com/d3/d3-path/blob/master/src/path.js): official version
