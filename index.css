@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+}
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.app #Chart {
+  flex: 1;
+}
+.app #Controls {
+  flex: 0 0 275px;
+  margin-right: 0.5em;
+}
+.Chart {
+  width: 100%;
+  height: 100%;
+  padding: 0.5em;
+  font-size: 12px;
+}
+.Chart svg {
+  width: 100%;
+  height: 100%;
+}
+.Chart svg .trends {
+  pointer-events: none;
+}
+.Chart svg .trends .curve path {
+  fill: none;
+}
+.Chart svg .trends .curve text {
+  fill: black;
+  stroke: none;
+  text-anchor: end;
+}
+.Chart svg .trends .dot {
+  fill: white;
+  stroke: black;
+}
+.Chart svg .trends .dot text {
+  dominant-baseline: middle;
+  text-anchor: middle;
+  stroke: none;
+  fill: black;
+}
+.Chart svg .axis {
+  pointer-events: none;
+}
+.Chart svg .axis path {
+  stroke: #8d8d8d;
+}
+.Chart svg .axis .tick line {
+  stroke: #9a9a9a;
+  stroke-opacity: 0.2;
+  shape-rendering: crispEdges;
+}
+.Chart svg .axis .tick text {
+  fill: black;
+  stroke: none;
+}
+.Chart svg .axis.x tick text {
+  dominant-baseline: hanging;
+}
+.Chart svg .axis .label {
+  fill: black;
+  stroke: none;
+  font-size: 1.25em;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+.Chart svg .axis .label tspan:nth-child(1) {
+  font-weight: bold;
+}
+.Chart svg .axis .label.min {
+  text-anchor: start;
+  font-style: italic;
+}
+.Chart svg .axis .label.max {
+  text-anchor: end;
+  font-style: italic;
+}
+.Chart svg .sensor {
+  fill-opacity: 0;
+  stroke: none;
+}
+.Controls {
+  width: 100%;
+  height: 100%;
+  padding: 0.25em;
+  font-size: 12px;
+  overflow: auto;
+}
+.Controls .panel {
+  padding: 0.5em;
+  margin-top: 1em;
+  border-radius: 0.4em;
+  background-color: #fafafa;
+}
+.Controls .panel .title {
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  border-bottom: 1px solid grey;
+  margin-bottom: 0.5em;
+  color: #262626;
+}
+.Controls .panel .row {
+  padding: 0.25em 0;
+  display: flex;
+  align-items: center;
+}
+.Controls .panel .row .dot {
+  flex: 0 0 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  margin: 0 0.5em;
+}
+.Controls .panel .row .value {
+  flex: 1;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+}
+.Controls .panel .row .value:hover {
+  background-color: #e6e6e6;
+}
+.Controls .panel .row .value.pinned {
+  background-color: #a6a6a6;
+  color: white;
+}
+.Controls .panel .row .value p {
+  pointer-events: none;
+}
