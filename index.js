@@ -15038,7 +15038,7 @@ Component$3.prototype.updateCurves = function() {
     .style('fill', function (d) { return this$1.implColor(d.impl); })
     .append('textPath')
     .attr('startOffset', '90%')
-    .attr('href', function (d) { return ("#" + (d.domID)); })
+    .attr('xlink:href', function (d) { return ("#" + (d.domID)); })
     .text(function (d) { return d.id; });
 
     this.curve = curveEnter.merge(this.curve);

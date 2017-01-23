@@ -84,11 +84,11 @@ body {
 }
 .Chart svg .axis .label.min {
   text-anchor: start;
-  font-style: italic;
+  fill: #999999;
 }
 .Chart svg .axis .label.max {
   text-anchor: end;
-  font-style: italic;
+  fill: #999999;
 }
 .Chart svg .sensor {
   fill-opacity: 0;
