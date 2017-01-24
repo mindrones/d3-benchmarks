@@ -124,9 +124,7 @@ For example, assuming `N = 10.1234567890123456` (16 digits):
 - `withFormat.path(5).moveTo(N,N)  => "M10.12346,10.12346"`
 - `withFormat.path(0).moveTo(N,N)  => "M10,10"`
 
-Hence, increasing digits should lower the used heap as the instance of path has to store a shorter string.
-
-Instead, a certain rounding method speed shouldn't be affected by the amount of digits.
+Hence, increasing digits should lower the used heap as the instance of path has to store a shorter string, but rounding the input value should increase the execution time.
 
 Here's an example of we what get in practice:
 
