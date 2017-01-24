@@ -14797,6 +14797,19 @@ Component$1.prototype.init = function() {
         });
 
     this.valueDiv = this.valueDiv.merge(valueEnter);
+
+    /* mini legend */
+
+    var legend = this.container.append('div').attr('class', 'legend');
+
+    legend
+    .append('div').attr('class', 'dot')
+    .append('p').text('N');
+
+    legend
+    .append('div').attr('class', 'phrase')
+    .append('p')
+    .text('N = log10(calls)');
 };
 
 Component$1.prototype.getStateHandler$ = function() {
