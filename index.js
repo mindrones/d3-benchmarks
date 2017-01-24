@@ -15119,7 +15119,7 @@ Component$3.prototype.connectData = function() {
             _.chain(input.items)
             .groupBy(function (obj) { return ((obj.impl.split('.').slice(1).join('.')) + "(" + (obj.digits) + ")." + (obj.command)); })
             .map(function (points, id) { return ({
-                id: id,
+                id: id.replace(/null/g, ''),
                 domID: id.replace(/[().]/g, '_'),
                 impl: points[0].impl,
                 points: points
@@ -15136,7 +15136,6 @@ Component$3.prototype.connectData = function() {
             ); }
         );
         data.allImplementations = input.allImplementations;
-
         return data
     })
     .subscribe(function (data) {
