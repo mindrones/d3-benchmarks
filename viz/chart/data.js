@@ -13,7 +13,7 @@ Component.prototype.connectData = function() {
             _.chain(input.items)
             .groupBy(obj => `${obj.impl.split('.').slice(1).join('.')}(${obj.digits}).${obj.command}`)
             .map((points, id) => ({
-                id: id,
+                id: id.replace(/null/g, ''),
                 domID: id.replace(/[().]/g, '_'),
                 impl: points[0].impl,
                 points: points
@@ -31,7 +31,6 @@ Component.prototype.connectData = function() {
             )
         )
         data.allImplementations = input.allImplementations
-
         return data
     })
     .subscribe(data => {
