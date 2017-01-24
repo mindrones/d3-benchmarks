@@ -107,6 +107,19 @@ Component.prototype.init = function() {
         })
 
     this.valueDiv = this.valueDiv.merge(valueEnter)
+
+    /* mini legend */
+
+    let legend = this.container.append('div').attr('class', 'legend')
+
+    legend
+    .append('div').attr('class', 'dot')
+    .append('p').text('N')
+
+    legend
+    .append('div').attr('class', 'phrase')
+    .append('p')
+    .text('N = log10(calls)')
 }
 
 Component.prototype.getStateHandler$ = function() {
