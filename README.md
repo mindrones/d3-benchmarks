@@ -12,13 +12,16 @@ Quick repo to support the discussion in [this d3-path issue](https://github.com/
 ### path
 
 Run with: `npm run path` to compare different implementations of d3's `path`.
+This bench outputs:
+- the **execution time**,
+- the **heap memory** used by the instance of `p` after executing all commands.
 
-Tested implementations of `path()`:
+#### Implementations of `d3.path()`
 
 - [current](https://github.com/d3/d3-path/blob/master/src/path.js): official version
-- [withFormat](https://github.com/mindrones/d3-benchmarks/blob/master/src/path/withFormat.js): derived from [this PR](https://github.com/d3/d3-path/blob/fixed/src/path.js), with added implementations:
+- [withFormat](https://github.com/mindrones/d3-benchmarks/blob/master/src/path/withFormat.js):
 
-  - `pathCoerceFixed`: input value coercion and truncation via `.toFixed()`
+  - `pathCoerceFixed`: input value coercion to a number and truncation via `.toFixed()` (copied from [this PR](https://github.com/d3/d3-path/blob/fixed/src/path.js) and renamed `pathFixed` -> `pathCoerceFixed` as we use `pathFixed` with no input value coercion):
 
     ```js
     export function pathCoerceFixed(digits) {
@@ -29,7 +32,7 @@ Tested implementations of `path()`:
     }
     ```
 
-  - `pathFixed`: similar to the original PR but no input value coercion, truncation via `.toFixed()`
+  - `pathFixed`: similar to the previous one without input value coercion, truncation via `.toFixed()`:
 
     ```js
     export function pathFixed(digits) {
@@ -40,9 +43,10 @@ Tested implementations of `path()`:
     }
     ```
 
-  - `pathCoerceRound`: input value coercion and truncation via [round](https://github.com/d3/d3-format/issues/32)
+  - `pathCoerceRound`: input value coercion to a number and truncation via [round](https://github.com/d3/d3-format/issues/32):
 
     ```js
+    import {round} from '../utils/round'
     export function pathCoerceRound(digits) {
         var path = new Path;
         (digits = +digits).toFixed(digits); // Validate digits.
@@ -51,19 +55,22 @@ Tested implementations of `path()`:
     }
     ```
 
-  - `pathFixed`: no input value coercion and truncation via same round as above
+  - `pathRound`: no input value coercion and truncation via same `round` as above:
 
     ```js
     export function pathRound(digits) {
-        var path = new Path;
-        (digits = +digits).toFixed(digits); // Validate digits.
-        path._format = function(x) { return round(x, digits); };
-        return path;
+      var path = new Path;
+      digits = +digits).toFixed(digits); // Validate digits.
+      path._format = function(x) { return round(x, digits); };
+      return path;
     }
     ```
 
-- [withIf](https://github.com/mindrones/d3-benchmarks/blob/master/src/path/withIf.js): instead of using a `format()` function, use ifs and round if we provided `digits`.
+- [withIf](https://github.com/mindrones/d3-benchmarks/blob/master/src/path/withIf.js): instead of using a `format()` function, use `if`s and round if we provided `digits`:
   ```js
+  import {round as R} from '../utils/round'
+
+  // ...
   moveTo: function(x, y) {
     if (this._d) {
       this._ += `M${R(this._x0 = this._x1 = x, this._d)},${R(this._y0 = this._y1 = y, this._d)}`;
@@ -72,7 +79,7 @@ Tested implementations of `path()`:
     }
   },
   ```
-  This implementation sort of duplicate code, so later on I'll add implementations assigning values to temporary vars, like:
+  This implementation duplicates code, so if the case we could test assigning values to temporary vars like this:
   ```js
   moveTo: function(x, y) {
     this._x0 = this._x1 = this._d ? R(x, this._d) : x
@@ -80,8 +87,6 @@ Tested implementations of `path()`:
     this._ += `M${this._x0},${this._y0}`;
   },
   ```
-
-This test saves the test execution time and the heap used by the instance of `p` after executing all commands.
 
 Results are saved in `./data/path.json` as a list of objects like:
 
