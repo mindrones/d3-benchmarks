@@ -4,3079 +4,3079 @@
     "digits": null,
     "command": "moveTo",
     "calls": 1,
-    "heap": 52409.90476190476,
-    "duration": 3.1844042251552287e-7
+    "heap": 54052.4,
+    "duration": 3.0409611217237767e-7
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "moveTo",
     "calls": 10,
-    "heap": 34981.6,
-    "duration": 0.0000014115466737465932
+    "heap": 37276.63157894737,
+    "duration": 0.0000014155300671557132
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "moveTo",
     "calls": 100,
-    "heap": 50443.555555555555,
-    "duration": 0.000012966889161554194
+    "heap": 47852,
+    "duration": 0.000012930177047397049
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "moveTo",
     "calls": 1000,
-    "heap": 200779.36842105264,
-    "duration": 0.0002643166046865171
+    "heap": 202122.22222222222,
+    "duration": 0.0002476881347248388
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "moveTo",
     "calls": 10000,
-    "heap": 1644501.894736842,
-    "duration": 0.0016328735237231182
+    "heap": 1648758.6666666667,
+    "duration": 0.0016802482726881718
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "moveTo",
+    "calls": 1,
+    "heap": 174964,
+    "duration": 3.7355028934818533e-7
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "moveTo",
+    "calls": 10,
+    "heap": 31717.333333333332,
+    "duration": 0.0000014479713993252112
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "moveTo",
+    "calls": 100,
+    "heap": 49272,
+    "duration": 0.000012971379466540403
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "moveTo",
+    "calls": 1000,
+    "heap": 196905.88235294117,
+    "duration": 0.0002542166523910411
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "moveTo",
+    "calls": 10000,
+    "heap": 1644492.6315789474,
+    "duration": 0.0016805986801433693
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "moveTo",
+    "calls": 1,
+    "heap": 46372.19047619047,
+    "duration": 7.921325558024268e-7
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "moveTo",
+    "calls": 10,
+    "heap": 35136,
+    "duration": 0.0000020090676741892473
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "moveTo",
+    "calls": 100,
+    "heap": 51716.444444444445,
+    "duration": 0.000016229171604876454
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "moveTo",
+    "calls": 1000,
+    "heap": 202957.33333333334,
+    "duration": 0.0002969109343115851
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "moveTo",
+    "calls": 10000,
+    "heap": 1641663.1578947369,
+    "duration": 0.0015720286686868685
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "moveTo",
+    "calls": 1,
+    "heap": 165244.57142857142,
+    "duration": 0.0000010242001082082886
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "moveTo",
+    "calls": 10,
+    "heap": 32934.73684210526,
+    "duration": 0.000002805911757219591
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "moveTo",
+    "calls": 100,
+    "heap": 46123.555555555555,
+    "duration": 0.000023650929364354333
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "moveTo",
+    "calls": 1000,
+    "heap": 157065.2,
+    "duration": 0.00020822783669408658
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "moveTo",
+    "calls": 10000,
+    "heap": 1242013.894736842,
+    "duration": 0.002356105360606061
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "moveTo",
+    "calls": 1,
+    "heap": 46460.21052631579,
+    "duration": 0.0000010525387540512184
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "moveTo",
+    "calls": 10,
+    "heap": 31392,
+    "duration": 0.000002603322008941178
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "moveTo",
+    "calls": 100,
+    "heap": 49356.21052631579,
+    "duration": 0.00002131539404427408
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "moveTo",
+    "calls": 1000,
+    "heap": 194608.7619047619,
+    "duration": 0.00021941392432861298
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "moveTo",
+    "calls": 10000,
+    "heap": 1663888.888888889,
+    "duration": 0.002199707019798137
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "moveTo",
+    "calls": 1,
+    "heap": 156907.63636363635,
+    "duration": 0.000001090136242371736
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "moveTo",
+    "calls": 10,
+    "heap": 31413.2,
+    "duration": 0.0000026207064473911466
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "moveTo",
+    "calls": 100,
+    "heap": 50472.444444444445,
+    "duration": 0.00002143140571084792
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "moveTo",
+    "calls": 1000,
+    "heap": 194885.6,
+    "duration": 0.0002487610625936584
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "moveTo",
+    "calls": 10000,
+    "heap": 1634230.3157894737,
+    "duration": 0.002189110636956522
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "moveTo",
     "calls": 1,
-    "heap": 148222.66666666666,
-    "duration": 3.709309245953788e-7
+    "heap": 33486.09523809524,
+    "duration": 3.0232220819533987e-7
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "moveTo",
     "calls": 10,
-    "heap": 32289.904761904763,
-    "duration": 0.0000017052893755216587
+    "heap": 32788.95238095238,
+    "duration": 0.0000016727770921457481
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "moveTo",
     "calls": 100,
-    "heap": 46740.88888888889,
-    "duration": 0.00001614897161465928
+    "heap": 48695.2,
+    "duration": 0.00001494875109137675
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "moveTo",
     "calls": 1000,
-    "heap": 199140.88888888888,
-    "duration": 0.00033849781029630867
+    "heap": 191178.2857142857,
+    "duration": 0.00016061652376648066
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "moveTo",
     "calls": 10000,
-    "heap": 1646943.5555555555,
-    "duration": 0.0019244301652348976
+    "heap": 1657355.5,
+    "duration": 0.001854191739784946
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "moveTo",
     "calls": 1,
-    "heap": 43813.6,
-    "duration": 0.0000012511692441526006
+    "heap": 168685.8947368421,
+    "duration": 0.0000012024636986434299
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "moveTo",
     "calls": 10,
-    "heap": 29042.4,
-    "duration": 0.0000033718325758952915
+    "heap": 30772,
+    "duration": 0.0000033438166123642434
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "moveTo",
     "calls": 100,
-    "heap": 35396,
-    "duration": 0.000025889527459749555
+    "heap": 38846.22222222222,
+    "duration": 0.000028187629273906515
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "moveTo",
     "calls": 1000,
-    "heap": 105812.63157894737,
-    "duration": 0.00023433967207421593
+    "heap": 102360.4,
+    "duration": 0.0002461166609385814
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "moveTo",
     "calls": 10000,
-    "heap": 771798.7368421053,
-    "duration": 0.002954506940740741
+    "heap": 761847.5789473684,
+    "duration": 0.003066824678921569
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "moveTo",
     "calls": 1,
-    "heap": 188195.11111111112,
-    "duration": 0.0000013314109306439385
+    "heap": 176396.88888888888,
+    "duration": 0.0000013485799998421459
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "moveTo",
     "calls": 10,
-    "heap": 30558.4,
-    "duration": 0.0000035018337915486016
+    "heap": 31636.95238095238,
+    "duration": 0.000003940115800512143
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "moveTo",
     "calls": 100,
-    "heap": 42705.77777777778,
-    "duration": 0.000026056206903892944
+    "heap": 50741.89473684211,
+    "duration": 0.000029568468751700892
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "moveTo",
     "calls": 1000,
-    "heap": 154582,
-    "duration": 0.0002357562702691443
+    "heap": 151336.8,
+    "duration": 0.0002479995804113766
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "moveTo",
     "calls": 10000,
-    "heap": 1242046.2222222222,
-    "duration": 0.0031330055568627446
+    "heap": 1246161.5,
+    "duration": 0.0029692845727272727
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "moveTo",
     "calls": 1,
-    "heap": 41452,
-    "duration": 0.000001295517821421212
+    "heap": 169686.73684210525,
+    "duration": 0.0000013306878466020469
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "moveTo",
     "calls": 10,
-    "heap": 31658.4,
-    "duration": 0.0000035617862436995888
+    "heap": 28413.333333333332,
+    "duration": 0.00000342176371015926
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "moveTo",
     "calls": 100,
-    "heap": 48856.42105263158,
-    "duration": 0.0000258980336017319
+    "heap": 47952.84210526316,
+    "duration": 0.0000248943258596245
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "moveTo",
     "calls": 1000,
-    "heap": 191715.2,
-    "duration": 0.0002209725347158366
+    "heap": 193170.1052631579,
+    "duration": 0.00022147998307114376
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "moveTo",
     "calls": 10000,
-    "heap": 1652149.894736842,
-    "duration": 0.002908456658169935
+    "heap": 1645700.888888889,
+    "duration": 0.0029420517000000005
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "moveTo",
     "calls": 1,
-    "heap": 181423.55555555556,
-    "duration": 0.0000013198650608602197
+    "heap": 144091.8260869565,
+    "duration": 0.0000013901998534289075
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "moveTo",
     "calls": 10,
-    "heap": 31968.4,
-    "duration": 0.0000033937845096194983
+    "heap": 28472.380952380954,
+    "duration": 0.0000034374313171541175
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "moveTo",
     "calls": 100,
-    "heap": 46816.88888888889,
-    "duration": 0.000025067489027839808
+    "heap": 49884.705882352944,
+    "duration": 0.000025170445402005833
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "moveTo",
     "calls": 1000,
-    "heap": 194274.52631578947,
-    "duration": 0.00021974898912204994
+    "heap": 194980.63157894736,
+    "duration": 0.00022156455693540087
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "moveTo",
     "calls": 10000,
-    "heap": 1632769.3333333333,
-    "duration": 0.002990356113912232
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "moveTo",
-    "calls": 1,
-    "heap": 32953.454545454544,
-    "duration": 3.509553741283626e-7
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "moveTo",
-    "calls": 10,
-    "heap": 30944.842105263157,
-    "duration": 0.0000016883388974755283
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "moveTo",
-    "calls": 100,
-    "heap": 47654.73684210526,
-    "duration": 0.00001451457349761849
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "moveTo",
-    "calls": 1000,
-    "heap": 191046.73684210525,
-    "duration": 0.00014921242336182335
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "moveTo",
-    "calls": 10000,
-    "heap": 1655911,
-    "duration": 0.001717576454166667
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "moveTo",
-    "calls": 1,
-    "heap": 163800.8,
-    "duration": 7.929986387086377e-7
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "moveTo",
-    "calls": 10,
-    "heap": 32905.2,
-    "duration": 0.0000019857509251803467
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "moveTo",
-    "calls": 100,
-    "heap": 46765.333333333336,
-    "duration": 0.000015767852863749556
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "moveTo",
-    "calls": 1000,
-    "heap": 197579.29411764705,
-    "duration": 0.0003037691096635296
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "moveTo",
-    "calls": 10000,
-    "heap": 1630928.4210526317,
-    "duration": 0.0016897738986559137
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "moveTo",
-    "calls": 1,
-    "heap": 153746.54545454544,
-    "duration": 0.0000010536940547913653
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "moveTo",
-    "calls": 10,
-    "heap": 29892.521739130436,
-    "duration": 0.000002743587149169076
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "moveTo",
-    "calls": 100,
-    "heap": 45538.22222222222,
-    "duration": 0.000024019384769228104
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "moveTo",
-    "calls": 1000,
-    "heap": 154702.73684210525,
-    "duration": 0.00021148188649030945
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "moveTo",
-    "calls": 10000,
-    "heap": 1248360,
-    "duration": 0.002407010997333333
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "moveTo",
-    "calls": 1,
-    "heap": 155136.7619047619,
-    "duration": 0.0000011199207683461273
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "moveTo",
-    "calls": 10,
-    "heap": 29784,
-    "duration": 0.0000027037660733842077
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "moveTo",
-    "calls": 100,
-    "heap": 46560.444444444445,
-    "duration": 0.00002133481794095382
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "moveTo",
-    "calls": 1000,
-    "heap": 193248.4,
-    "duration": 0.00019330635600363678
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "moveTo",
-    "calls": 10000,
-    "heap": 1646968.888888889,
-    "duration": 0.002212683586594203
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "moveTo",
-    "calls": 1,
-    "heap": 144972.86956521738,
-    "duration": 0.0000011632452595572218
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "moveTo",
-    "calls": 10,
-    "heap": 27733.6,
-    "duration": 0.000002747523354138016
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "moveTo",
-    "calls": 100,
-    "heap": 48151.11111111111,
-    "duration": 0.000021145667053735082
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "moveTo",
-    "calls": 1000,
-    "heap": 194133.8947368421,
-    "duration": 0.00019831336088904365
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "moveTo",
-    "calls": 10000,
-    "heap": 1649147.5,
-    "duration": 0.0022760187179487177
+    "heap": 1657582.5,
+    "duration": 0.0028120478637681163
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "lineTo",
     "calls": 1,
-    "heap": 153135.2380952381,
-    "duration": 3.6192340606743835e-7
+    "heap": 161016.8,
+    "duration": 3.513685828333367e-7
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "lineTo",
     "calls": 10,
-    "heap": 29161.14285714286,
-    "duration": 0.0000013234813242523556
+    "heap": 33129.818181818184,
+    "duration": 0.0000012923793280812826
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "lineTo",
     "calls": 100,
-    "heap": 46642.666666666664,
-    "duration": 0.000012330566645520547
+    "heap": 46852.444444444445,
+    "duration": 0.00001200368
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "lineTo",
     "calls": 1000,
-    "heap": 195943.5294117647,
-    "duration": 0.0002498447850459804
+    "heap": 194933.17647058822,
+    "duration": 0.00023080158711985158
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "lineTo",
     "calls": 10000,
-    "heap": 1631440.8421052631,
-    "duration": 0.0015451457512418298
+    "heap": 1631177.7777777778,
+    "duration": 0.0015907844747474749
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "lineTo",
+    "calls": 1,
+    "heap": 156172.57142857142,
+    "duration": 4.187236343765345e-7
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "lineTo",
+    "calls": 10,
+    "heap": 32006.4,
+    "duration": 0.0000013691713935767621
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "lineTo",
+    "calls": 100,
+    "heap": 46757.77777777778,
+    "duration": 0.000012254816000579208
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "lineTo",
+    "calls": 1000,
+    "heap": 192687.5294117647,
+    "duration": 0.0002352185380379373
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "lineTo",
+    "calls": 10000,
+    "heap": 1631285.7777777778,
+    "duration": 0.0015144753784313723
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "lineTo",
+    "calls": 1,
+    "heap": 31546.909090909092,
+    "duration": 8.172126088497349e-7
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "lineTo",
+    "calls": 10,
+    "heap": 34437.89473684211,
+    "duration": 0.0000017993056141427957
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "lineTo",
+    "calls": 100,
+    "heap": 46972.444444444445,
+    "duration": 0.000013171469218870843
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "lineTo",
+    "calls": 1000,
+    "heap": 196354.94736842104,
+    "duration": 0.00025089276195211047
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "lineTo",
+    "calls": 10000,
+    "heap": 1631300,
+    "duration": 0.0015797149784313729
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "lineTo",
+    "calls": 1,
+    "heap": 31666.8,
+    "duration": 0.0000011218581480789625
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "lineTo",
+    "calls": 10,
+    "heap": 31690,
+    "duration": 0.0000029126263674511356
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "lineTo",
+    "calls": 100,
+    "heap": 42723.555555555555,
+    "duration": 0.000022678996754563895
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "lineTo",
+    "calls": 1000,
+    "heap": 151104.72727272726,
+    "duration": 0.00021220792405261902
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "lineTo",
+    "calls": 10000,
+    "heap": 1249272.888888889,
+    "duration": 0.0026038707514285716
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "lineTo",
+    "calls": 1,
+    "heap": 161744,
+    "duration": 0.000001138992174107636
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "lineTo",
+    "calls": 10,
+    "heap": 31296.363636363636,
+    "duration": 0.0000026973574422676355
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "lineTo",
+    "calls": 100,
+    "heap": 46779.555555555555,
+    "duration": 0.00002085323135645903
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "lineTo",
+    "calls": 1000,
+    "heap": 192988.95238095237,
+    "duration": 0.0002009046806952688
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "lineTo",
+    "calls": 10000,
+    "heap": 1633150.6666666667,
+    "duration": 0.0022416416760210806
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "lineTo",
+    "calls": 1,
+    "heap": 29708.8,
+    "duration": 0.0000011147231073565646
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "lineTo",
+    "calls": 10,
+    "heap": 29032.761904761905,
+    "duration": 0.0000026833225024707194
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "lineTo",
+    "calls": 100,
+    "heap": 46835.555555555555,
+    "duration": 0.000020292831139877735
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "lineTo",
+    "calls": 1000,
+    "heap": 192213.2,
+    "duration": 0.0001951513540427989
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "lineTo",
+    "calls": 10000,
+    "heap": 1646413.7777777778,
+    "duration": 0.0022053329159420288
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "lineTo",
     "calls": 1,
-    "heap": 158977.6,
-    "duration": 3.694009999046331e-7
+    "heap": 158375.2,
+    "duration": 3.078915030562215e-7
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "lineTo",
     "calls": 10,
-    "heap": 30981.454545454544,
-    "duration": 0.0000016235153461114394
+    "heap": 31128,
+    "duration": 0.0000015621780934594382
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "lineTo",
     "calls": 100,
-    "heap": 47557.333333333336,
-    "duration": 0.00001571310092123986
+    "heap": 48834,
+    "duration": 0.000014058881855022472
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "lineTo",
     "calls": 1000,
-    "heap": 194171.11111111112,
-    "duration": 0.00031100031982861224
+    "heap": 192984.42105263157,
+    "duration": 0.00015045375300486765
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "lineTo",
     "calls": 10000,
-    "heap": 1631725.4736842106,
-    "duration": 0.0018208998018062398
+    "heap": 1659899.7333333334,
+    "duration": 0.0017539770627705627
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "lineTo",
     "calls": 1,
-    "heap": 28977.904761904763,
-    "duration": 0.000001209523570114391
+    "heap": 160188.4,
+    "duration": 0.0000011776630201571169
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "lineTo",
     "calls": 10,
-    "heap": 30505.333333333332,
-    "duration": 0.0000030952018257635525
+    "heap": 30766.222222222223,
+    "duration": 0.0000030699425720372244
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "lineTo",
     "calls": 100,
-    "heap": 34930.22222222222,
-    "duration": 0.00002346931368903261
+    "heap": 38840.444444444445,
+    "duration": 0.000024949678556495157
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "lineTo",
     "calls": 1000,
-    "heap": 102930.94736842105,
-    "duration": 0.0002149829796692371
+    "heap": 104094,
+    "duration": 0.0002181103829941937
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "lineTo",
     "calls": 10000,
-    "heap": 747966.3157894737,
-    "duration": 0.002863914979337232
+    "heap": 778480.5333333333,
+    "duration": 0.002620940163690476
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "lineTo",
     "calls": 1,
-    "heap": 31565.333333333332,
-    "duration": 0.0000013205209961594807
+    "heap": 174375.11111111112,
+    "duration": 0.0000013364106984327583
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "lineTo",
     "calls": 10,
-    "heap": 30539.11111111111,
-    "duration": 0.0000032742222326932894
+    "heap": 30800,
+    "duration": 0.0000032639276389225924
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "lineTo",
     "calls": 100,
-    "heap": 44275.555555555555,
-    "duration": 0.00002435342608967898
+    "heap": 45772.705882352944,
+    "duration": 0.000026021383211170245
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "lineTo",
     "calls": 1000,
-    "heap": 151490.66666666666,
-    "duration": 0.0002216470185796075
+    "heap": 153771.42857142858,
+    "duration": 0.00022066647267312056
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "lineTo",
     "calls": 10000,
-    "heap": 1247437.7777777778,
-    "duration": 0.002829067307407408
+    "heap": 1248299.3684210526,
+    "duration": 0.0028843213102396513
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "lineTo",
     "calls": 1,
-    "heap": 159982,
-    "duration": 0.0000013364545538225705
+    "heap": 160160.4,
+    "duration": 0.0000013112612161954801
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "lineTo",
     "calls": 10,
-    "heap": 28910.4,
-    "duration": 0.0000030819692580515987
+    "heap": 31813.894736842107,
+    "duration": 0.0000030266130145673003
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "lineTo",
     "calls": 100,
-    "heap": 46803.11111111111,
-    "duration": 0.000022536961299892128
+    "heap": 47064,
+    "duration": 0.000022142416774367255
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "lineTo",
     "calls": 1000,
-    "heap": 192285.7142857143,
-    "duration": 0.00020019802129143252
+    "heap": 192365.2,
+    "duration": 0.00020506728789307426
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "lineTo",
     "calls": 10000,
-    "heap": 1630996.4444444445,
-    "duration": 0.002700309828070175
+    "heap": 1651692.8,
+    "duration": 0.0025843072609890113
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "lineTo",
     "calls": 1,
-    "heap": 29634.8,
-    "duration": 0.0000013878626768799931
+    "heap": 161596.8,
+    "duration": 0.000001372519518874618
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "lineTo",
     "calls": 10,
-    "heap": 29660.95238095238,
-    "duration": 0.00000320588320828128
+    "heap": 30768,
+    "duration": 0.0000030139394447839692
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "lineTo",
     "calls": 100,
-    "heap": 46811.11111111111,
-    "duration": 0.000022118688107467406
+    "heap": 47072,
+    "duration": 0.00002271425116092874
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "lineTo",
     "calls": 1000,
-    "heap": 194782.47619047618,
-    "duration": 0.00020190827338310347
+    "heap": 192400,
+    "duration": 0.00020018816420904617
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "lineTo",
     "calls": 10000,
-    "heap": 1646346.105263158,
-    "duration": 0.0026419900735087714
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "lineTo",
-    "calls": 1,
-    "heap": 142062.60869565216,
-    "duration": 3.9018278948085094e-7
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "lineTo",
-    "calls": 10,
-    "heap": 31653.2,
-    "duration": 0.000001427461527974298
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "lineTo",
-    "calls": 100,
-    "heap": 46848,
-    "duration": 0.000012094791033780079
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "lineTo",
-    "calls": 1000,
-    "heap": 192728.84210526315,
-    "duration": 0.00012718197987866156
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "lineTo",
-    "calls": 10000,
-    "heap": 1657166,
-    "duration": 0.0015498860964912283
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "lineTo",
-    "calls": 1,
-    "heap": 157489.52380952382,
-    "duration": 8.276241319501054e-7
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "lineTo",
-    "calls": 10,
-    "heap": 30103.6,
-    "duration": 0.0000018221597195710268
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "lineTo",
-    "calls": 100,
-    "heap": 46762.666666666664,
-    "duration": 0.00001344867741835389
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "lineTo",
-    "calls": 1000,
-    "heap": 191926.4,
-    "duration": 0.0001293586457715849
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "lineTo",
-    "calls": 10000,
-    "heap": 1649172,
-    "duration": 0.0015124261631578948
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "lineTo",
-    "calls": 1,
-    "heap": 150699.63636363635,
-    "duration": 0.0000010476871619605356
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "lineTo",
-    "calls": 10,
-    "heap": 28556.571428571428,
-    "duration": 0.000002719106528051033
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "lineTo",
-    "calls": 100,
-    "heap": 43815.555555555555,
-    "duration": 0.000023127931240535287
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "lineTo",
-    "calls": 1000,
-    "heap": 153127.15789473685,
-    "duration": 0.00020580820857705556
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "lineTo",
-    "calls": 10000,
-    "heap": 1247269.7777777778,
-    "duration": 0.002318245987878788
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "lineTo",
-    "calls": 1,
-    "heap": 155167.61904761905,
-    "duration": 0.0000010539718905379
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "lineTo",
-    "calls": 10,
-    "heap": 30733.6,
-    "duration": 0.000002616696766245607
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "lineTo",
-    "calls": 100,
-    "heap": 46563.555555555555,
-    "duration": 0.00002029691813294233
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "lineTo",
-    "calls": 1000,
-    "heap": 191766.4,
-    "duration": 0.0001904038024941046
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "lineTo",
-    "calls": 10000,
-    "heap": 1649164,
-    "duration": 0.0021763053166666668
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "lineTo",
-    "calls": 1,
-    "heap": 169779.7894736842,
-    "duration": 0.0000010802793285845872
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "lineTo",
-    "calls": 10,
-    "heap": 29316,
-    "duration": 0.000002572709228745623
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "lineTo",
-    "calls": 100,
-    "heap": 49622.22222222222,
-    "duration": 0.000020224190424391755
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "lineTo",
-    "calls": 1000,
-    "heap": 195334.31578947368,
-    "duration": 0.0002828471597438833
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "lineTo",
-    "calls": 10000,
-    "heap": 1651681.6842105263,
-    "duration": 0.002208422868888889
+    "heap": 1646037.0526315789,
+    "duration": 0.0027405628580896685
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "quadraticCurveTo",
     "calls": 1,
-    "heap": 160295.2,
-    "duration": 4.3566872526300417e-7
+    "heap": 157543.61904761905,
+    "duration": 4.1342494891918645e-7
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "quadraticCurveTo",
     "calls": 10,
-    "heap": 32034.666666666668,
-    "duration": 0.000002098556977668466
+    "heap": 31327.619047619046,
+    "duration": 0.000002075361486763182
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "quadraticCurveTo",
     "calls": 100,
-    "heap": 59320,
-    "duration": 0.00002099888666414809
+    "heap": 61458.22222222222,
+    "duration": 0.000021158198069519085
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "quadraticCurveTo",
     "calls": 1000,
-    "heap": 354235.7894736842,
-    "duration": 0.00021408040557631703
+    "heap": 351354.28571428574,
+    "duration": 0.0002121089260826211
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "quadraticCurveTo",
     "calls": 10000,
-    "heap": 3257918.736842105,
-    "duration": 0.0026965793614619885
+    "heap": 3258547.111111111,
+    "duration": 0.002742765238791423
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "quadraticCurveTo",
+    "calls": 1,
+    "heap": 179661.45454545456,
+    "duration": 4.93272994553702e-7
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "quadraticCurveTo",
+    "calls": 10,
+    "heap": 32474.18181818182,
+    "duration": 0.0000021136964980246084
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "quadraticCurveTo",
+    "calls": 100,
+    "heap": 61005.333333333336,
+    "duration": 0.00002225649462244021
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "quadraticCurveTo",
+    "calls": 1000,
+    "heap": 350725.05263157893,
+    "duration": 0.00021726459737484742
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "quadraticCurveTo",
+    "calls": 10000,
+    "heap": 3240559.529411765,
+    "duration": 0.0031550586901960783
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "quadraticCurveTo",
+    "calls": 1,
+    "heap": 31174.4,
+    "duration": 8.288531666318462e-7
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "quadraticCurveTo",
+    "calls": 10,
+    "heap": 30131.2,
+    "duration": 0.000002462247497004394
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "quadraticCurveTo",
+    "calls": 100,
+    "heap": 61386.666666666664,
+    "duration": 0.000022721202836171993
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "quadraticCurveTo",
+    "calls": 1000,
+    "heap": 351462.09523809527,
+    "duration": 0.00022198828018982932
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "quadraticCurveTo",
+    "calls": 10000,
+    "heap": 3259302.117647059,
+    "duration": 0.0030637691411764703
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "quadraticCurveTo",
+    "calls": 1,
+    "heap": 191394,
+    "duration": 0.0000012061255244292742
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "quadraticCurveTo",
+    "calls": 10,
+    "heap": 31157.81818181818,
+    "duration": 0.0000038836241306985934
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "quadraticCurveTo",
+    "calls": 100,
+    "heap": 59035.294117647056,
+    "duration": 0.00003814316986909503
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "quadraticCurveTo",
+    "calls": 1000,
+    "heap": 310499.4285714286,
+    "duration": 0.0003520563152213588
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "quadraticCurveTo",
+    "calls": 10000,
+    "heap": 2830344.9411764704,
+    "duration": 0.004483180433333333
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "quadraticCurveTo",
+    "calls": 1,
+    "heap": 35468.21052631579,
+    "duration": 0.0000011593920242952259
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "quadraticCurveTo",
+    "calls": 10,
+    "heap": 31142.4,
+    "duration": 0.000003886988734322797
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "quadraticCurveTo",
+    "calls": 100,
+    "heap": 63230.22222222222,
+    "duration": 0.00003650746074243462
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "quadraticCurveTo",
+    "calls": 1000,
+    "heap": 352368.8,
+    "duration": 0.00032131901536137204
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "quadraticCurveTo",
+    "calls": 10000,
+    "heap": 3251448,
+    "duration": 0.004463873928571428
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "quadraticCurveTo",
+    "calls": 1,
+    "heap": 175337.0909090909,
+    "duration": 0.0000011977847374158885
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "quadraticCurveTo",
+    "calls": 10,
+    "heap": 31602.08695652174,
+    "duration": 0.000003719311358168155
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "quadraticCurveTo",
+    "calls": 100,
+    "heap": 63187.11111111111,
+    "duration": 0.000035971570457032006
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "quadraticCurveTo",
+    "calls": 1000,
+    "heap": 351343.15789473685,
+    "duration": 0.0003287438932489451
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "quadraticCurveTo",
+    "calls": 10000,
+    "heap": 3241525,
+    "duration": 0.004194888912087911
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "quadraticCurveTo",
     "calls": 1,
-    "heap": 181299.42857142858,
-    "duration": 4.63752931605319e-7
+    "heap": 32383.57894736842,
+    "duration": 3.853186158499017e-7
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "quadraticCurveTo",
     "calls": 10,
-    "heap": 31860.21052631579,
-    "duration": 0.0000025373718904885995
+    "heap": 30900.571428571428,
+    "duration": 0.0000024846145971253967
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "quadraticCurveTo",
     "calls": 100,
-    "heap": 61875.11111111111,
-    "duration": 0.000026622247021213113
+    "heap": 59514.8,
+    "duration": 0.00002396119695014103
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "quadraticCurveTo",
     "calls": 1000,
-    "heap": 351712.4210526316,
-    "duration": 0.0002612513227406888
+    "heap": 352140,
+    "duration": 0.00025788649504001915
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "quadraticCurveTo",
     "calls": 10000,
-    "heap": 3240219.7647058824,
-    "duration": 0.0030158763764705884
+    "heap": 3255052.8,
+    "duration": 0.0030420882380952385
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "quadraticCurveTo",
     "calls": 1,
-    "heap": 30501.473684210527,
-    "duration": 0.0000013787877027861763
+    "heap": 199281.26315789475,
+    "duration": 0.0000013713542682434644
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "quadraticCurveTo",
     "calls": 10,
-    "heap": 31311.57894736842,
-    "duration": 0.000004987901602246869
+    "heap": 32490,
+    "duration": 0.000005003123854988462
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "quadraticCurveTo",
     "calls": 100,
-    "heap": 41824.88888888889,
-    "duration": 0.00004696687734244304
+    "heap": 43810.35294117647,
+    "duration": 0.00004664528662432787
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "quadraticCurveTo",
     "calls": 1000,
-    "heap": 112545.33333333333,
-    "duration": 0.0004235929527503048
+    "heap": 111029.6,
+    "duration": 0.0004207730073946765
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "quadraticCurveTo",
     "calls": 10000,
-    "heap": 848128.8888888889,
-    "duration": 0.005479988143333333
+    "heap": 852944,
+    "duration": 0.005331355635714285
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "quadraticCurveTo",
     "calls": 1,
-    "heap": 189886.4,
-    "duration": 0.0000015254516273927978
+    "heap": 183317.7142857143,
+    "duration": 0.000001514183858505706
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "quadraticCurveTo",
     "calls": 10,
-    "heap": 30874.4,
-    "duration": 0.000004802981450659904
+    "heap": 31296.4,
+    "duration": 0.000004764228028817233
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "quadraticCurveTo",
     "calls": 100,
-    "heap": 62336.88888888889,
-    "duration": 0.000043524655164420076
+    "heap": 63068.88888888889,
+    "duration": 0.00004288755558390393
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "quadraticCurveTo",
     "calls": 1000,
-    "heap": 312644.4,
-    "duration": 0.0003782297120564734
+    "heap": 314405.05263157893,
+    "duration": 0.0003703745005880002
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "quadraticCurveTo",
     "calls": 10000,
-    "heap": 2830982.588235294,
-    "duration": 0.005570108926666666
+    "heap": 2859454.4,
+    "duration": 0.004973955979591836
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "quadraticCurveTo",
     "calls": 1,
-    "heap": 30532.571428571428,
-    "duration": 0.0000014618223464032142
+    "heap": 181974.09523809524,
+    "duration": 0.0000014979125255459046
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "quadraticCurveTo",
     "calls": 10,
-    "heap": 31031.11111111111,
-    "duration": 0.000004487640621613916
+    "heap": 29810.909090909092,
+    "duration": 0.000004574117475126209
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "quadraticCurveTo",
     "calls": 100,
-    "heap": 65962.82352941176,
-    "duration": 0.000041846878534087274
+    "heap": 66648.4705882353,
+    "duration": 0.00004054211874111371
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "quadraticCurveTo",
     "calls": 1000,
-    "heap": 355514.6666666667,
-    "duration": 0.0003916488664017131
+    "heap": 353092.1904761905,
+    "duration": 0.0003655120108128611
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "quadraticCurveTo",
     "calls": 10000,
-    "heap": 3256879.0588235296,
-    "duration": 0.005620155422222222
+    "heap": 3261470.5,
+    "duration": 0.005662996666666667
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "quadraticCurveTo",
     "calls": 1,
-    "heap": 199159.57894736843,
-    "duration": 0.0000015104040663911767
+    "heap": 174312.72727272726,
+    "duration": 0.0000015463862147731548
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "quadraticCurveTo",
     "calls": 10,
-    "heap": 29313.6,
-    "duration": 0.000004816478604403409
+    "heap": 30557.333333333332,
+    "duration": 0.000004708670503129954
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "quadraticCurveTo",
     "calls": 100,
-    "heap": 64568,
-    "duration": 0.00004371707369138987
+    "heap": 66656.4705882353,
+    "duration": 0.000041070215301015424
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "quadraticCurveTo",
     "calls": 1000,
-    "heap": 354202.22222222225,
-    "duration": 0.0003845774623388789
+    "heap": 355350.3157894737,
+    "duration": 0.00036415069602004004
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "quadraticCurveTo",
     "calls": 10000,
-    "heap": 3241017.5,
-    "duration": 0.005715205874358973
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "quadraticCurveTo",
-    "calls": 1,
-    "heap": 30980.8,
-    "duration": 4.5678698557453363e-7
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "quadraticCurveTo",
-    "calls": 10,
-    "heap": 32032.842105263157,
-    "duration": 0.0000022589839815674262
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "quadraticCurveTo",
-    "calls": 100,
-    "heap": 60856.42105263158,
-    "duration": 0.00002214907999240248
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "quadraticCurveTo",
-    "calls": 1000,
-    "heap": 353182.1176470588,
-    "duration": 0.00023982828342070773
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "quadraticCurveTo",
-    "calls": 10000,
-    "heap": 3254837.3333333335,
-    "duration": 0.003341823604166666
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "quadraticCurveTo",
-    "calls": 1,
-    "heap": 193749.2,
-    "duration": 9.378859478208085e-7
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "quadraticCurveTo",
-    "calls": 10,
-    "heap": 33324.57142857143,
-    "duration": 0.0000027510931326254714
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "quadraticCurveTo",
-    "calls": 100,
-    "heap": 64564.21052631579,
-    "duration": 0.000026118768135294012
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "quadraticCurveTo",
-    "calls": 1000,
-    "heap": 352312,
-    "duration": 0.00023990402800608826
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "quadraticCurveTo",
-    "calls": 10000,
-    "heap": 3259384.5,
-    "duration": 0.0034383624455128197
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "quadraticCurveTo",
-    "calls": 1,
-    "heap": 221639.5294117647,
-    "duration": 0.0000013037173841992046
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "quadraticCurveTo",
-    "calls": 10,
-    "heap": 29212.363636363636,
-    "duration": 0.000004510412432328796
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "quadraticCurveTo",
-    "calls": 100,
-    "heap": 59218.666666666664,
-    "duration": 0.00004266551214423118
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "quadraticCurveTo",
-    "calls": 1000,
-    "heap": 314083.76470588235,
-    "duration": 0.0003740483107859577
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "quadraticCurveTo",
-    "calls": 10000,
-    "heap": 2855081.6,
-    "duration": 0.004621649652380952
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "quadraticCurveTo",
-    "calls": 1,
-    "heap": 174862.18181818182,
-    "duration": 0.0000012154976637156051
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "quadraticCurveTo",
-    "calls": 10,
-    "heap": 30557.454545454544,
-    "duration": 0.0000040713610813938935
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "quadraticCurveTo",
-    "calls": 100,
-    "heap": 61973.333333333336,
-    "duration": 0.00004311541628220083
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "quadraticCurveTo",
-    "calls": 1000,
-    "heap": 353004.63157894736,
-    "duration": 0.0003683954799682351
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "quadraticCurveTo",
-    "calls": 10000,
-    "heap": 3249519.529411765,
-    "duration": 0.004737649363095237
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "quadraticCurveTo",
-    "calls": 1,
-    "heap": 190432.4,
-    "duration": 0.0000012328985686779052
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "quadraticCurveTo",
-    "calls": 10,
-    "heap": 32433.14285714286,
-    "duration": 0.000004357758965201068
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "quadraticCurveTo",
-    "calls": 100,
-    "heap": 61823.05882352941,
-    "duration": 0.00004037580612930021
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "quadraticCurveTo",
-    "calls": 1000,
-    "heap": 352312,
-    "duration": 0.0003628019236111111
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "quadraticCurveTo",
-    "calls": 10000,
-    "heap": 3263537.6,
-    "duration": 0.004534835348214286
+    "heap": 3264009.6,
+    "duration": 0.004996457843750001
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "rect",
     "calls": 1,
-    "heap": 188611.2,
-    "duration": 0.0000011213908791364865
+    "heap": 175776,
+    "duration": 0.0000011302196710853054
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "rect",
     "calls": 10,
-    "heap": 34449.52380952381,
-    "duration": 0.000008783113160560461
+    "heap": 35668,
+    "duration": 0.000008561352393023373
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "rect",
     "calls": 100,
-    "heap": 85781.33333333333,
-    "duration": 0.00009991647109395895
+    "heap": 84137.88235294117,
+    "duration": 0.00009792838146261615
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "rect",
     "calls": 1000,
-    "heap": 568150.9565217391,
-    "duration": 0.0009468268344127428
+    "heap": 567005.2,
+    "duration": 0.000898714424540518
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "rect",
     "calls": 10000,
-    "heap": 5414746,
-    "duration": 0.010605016511904763
+    "heap": 5424936,
+    "duration": 0.010221912914285713
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "rect",
+    "calls": 1,
+    "heap": 201369.26315789475,
+    "duration": 0.0000011901552481216603
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "rect",
+    "calls": 10,
+    "heap": 36381.333333333336,
+    "duration": 0.000008422832119623298
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "rect",
+    "calls": 100,
+    "heap": 84079.5294117647,
+    "duration": 0.00009548307199077029
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "rect",
+    "calls": 1000,
+    "heap": 565584.8421052631,
+    "duration": 0.000902946407790309
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "rect",
+    "calls": 10000,
+    "heap": 5392696,
+    "duration": 0.010663408773809524
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "rect",
+    "calls": 1,
+    "heap": 32604.190476190477,
+    "duration": 0.0000017298255787330526
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "rect",
+    "calls": 10,
+    "heap": 35642.4,
+    "duration": 0.00000919587511170872
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "rect",
+    "calls": 100,
+    "heap": 85219.11111111111,
+    "duration": 0.00009653459105673923
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "rect",
+    "calls": 1000,
+    "heap": 568218.1052631579,
+    "duration": 0.0009028232263918725
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "rect",
+    "calls": 10000,
+    "heap": 5417528,
+    "duration": 0.01053019575
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "rect",
+    "calls": 1,
+    "heap": 190324.8,
+    "duration": 0.0000020746130521846523
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "rect",
+    "calls": 10,
+    "heap": 37810.10526315789,
+    "duration": 0.000010546102461060936
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "rect",
+    "calls": 100,
+    "heap": 79759.5294117647,
+    "duration": 0.00010839133217175573
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "rect",
+    "calls": 1000,
+    "heap": 503409.6842105263,
+    "duration": 0.0009817392410256412
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "rect",
+    "calls": 10000,
+    "heap": 4761080,
+    "duration": 0.009682870226190476
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "rect",
+    "calls": 1,
+    "heap": 33052,
+    "duration": 0.0000020317963795510393
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "rect",
+    "calls": 10,
+    "heap": 35436.4,
+    "duration": 0.00001030138677193944
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "rect",
+    "calls": 100,
+    "heap": 83558.85714285714,
+    "duration": 0.00011109938144677372
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "rect",
+    "calls": 1000,
+    "heap": 554532.7058823529,
+    "duration": 0.0010106552417032968
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "rect",
+    "calls": 10000,
+    "heap": 5264271,
+    "duration": 0.009792694976190477
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "rect",
+    "calls": 1,
+    "heap": 190240.8,
+    "duration": 0.0000021152186393932914
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "rect",
+    "calls": 10,
+    "heap": 34832.380952380954,
+    "duration": 0.000010888578454911302
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "rect",
+    "calls": 100,
+    "heap": 83975.57894736843,
+    "duration": 0.00011908816947348717
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "rect",
+    "calls": 1000,
+    "heap": 572581.6470588235,
+    "duration": 0.0011002951098441256
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "rect",
+    "calls": 10000,
+    "heap": 5405385,
+    "duration": 0.010415800957142857
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "rect",
     "calls": 1,
-    "heap": 172779.63636363635,
-    "duration": 0.0000011762849239984178
+    "heap": 32946.94736842105,
+    "duration": 0.0000010464094884176482
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "rect",
     "calls": 10,
-    "heap": 33500.36363636364,
-    "duration": 0.000009055554834453015
+    "heap": 34838.95652173913,
+    "duration": 0.00000879218393313357
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "rect",
     "calls": 100,
-    "heap": 83440.94117647059,
-    "duration": 0.00010021077686119392
+    "heap": 82149.05263157895,
+    "duration": 0.0000856057759536265
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "rect",
     "calls": 1000,
-    "heap": 565673.6,
-    "duration": 0.0009285356879896282
+    "heap": 568988.8888888889,
+    "duration": 0.0008772911196210868
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "rect",
     "calls": 10000,
-    "heap": 5396459.294117647,
-    "duration": 0.010650490816666667
+    "heap": 5427868.8,
+    "duration": 0.010312439295918366
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "rect",
     "calls": 1,
-    "heap": 32816,
-    "duration": 0.0000023050679432733304
+    "heap": 207937.33333333334,
+    "duration": 0.00000222163464621603
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "rect",
     "calls": 10,
-    "heap": 31662.47619047619,
-    "duration": 0.000010205894644250024
+    "heap": 30602.782608695652,
+    "duration": 0.000010158227251484188
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "rect",
     "calls": 100,
-    "heap": 56761.41176470588,
-    "duration": 0.00010096882291392263
+    "heap": 59199.05882352941,
+    "duration": 0.00010283867121605526
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "rect",
     "calls": 1000,
-    "heap": 265642.6666666667,
-    "duration": 0.0009347824945454546
+    "heap": 267750.6666666667,
+    "duration": 0.0009052468497725796
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "rect",
     "calls": 10000,
-    "heap": 2374269,
-    "duration": 0.01216591587142857
+    "heap": 2374508.5,
+    "duration": 0.011629033428571427
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "rect",
     "calls": 1,
-    "heap": 199666.94736842104,
-    "duration": 0.0000023794053000448802
+    "heap": 198841.26315789475,
+    "duration": 0.0000024615940206394855
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "rect",
     "calls": 10,
-    "heap": 35428.95238095238,
-    "duration": 0.000011211635384105728
+    "heap": 34530.28571428572,
+    "duration": 0.000010730582910108088
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "rect",
     "calls": 100,
-    "heap": 77112.94117647059,
-    "duration": 0.00011279367989189482
+    "heap": 81049.26315789473,
+    "duration": 0.00010642179322465658
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "rect",
     "calls": 1000,
-    "heap": 504000.44444444444,
-    "duration": 0.0010584197666495168
+    "heap": 504604.8888888889,
+    "duration": 0.0009619810006047411
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "rect",
     "calls": 10000,
-    "heap": 4763104.533333333,
-    "duration": 0.013149101446428573
+    "heap": 4784496.533333333,
+    "duration": 0.011767482178571428
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "rect",
     "calls": 1,
-    "heap": 32140.444444444445,
-    "duration": 0.0000023383693930032536
+    "heap": 195352.84210526315,
+    "duration": 0.0000023098063259924455
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "rect",
     "calls": 10,
-    "heap": 35481.142857142855,
-    "duration": 0.0000112790160245534
+    "heap": 36153.04347826087,
+    "duration": 0.000011086637579430507
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "rect",
     "calls": 100,
-    "heap": 82008.94117647059,
-    "duration": 0.00011529831979049661
+    "heap": 82724.23529411765,
+    "duration": 0.00011169662772969358
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "rect",
     "calls": 1000,
-    "heap": 554636.4444444445,
-    "duration": 0.00106530875407605
+    "heap": 552900.8,
+    "duration": 0.0010076069095133232
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "rect",
     "calls": 10000,
-    "heap": 5262970.133333334,
-    "duration": 0.013236822624999997
+    "heap": 5263435.733333333,
+    "duration": 0.012777720892857142
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "rect",
     "calls": 1,
-    "heap": 189133.2,
-    "duration": 0.000002486242719742972
+    "heap": 188056.8,
+    "duration": 0.0000023882360875806877
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "rect",
     "calls": 10,
-    "heap": 34173.05263157895,
-    "duration": 0.000012058536501016194
+    "heap": 37898.10526315789,
+    "duration": 0.000011542182481013648
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "rect",
     "calls": 100,
-    "heap": 85600.4705882353,
-    "duration": 0.00012291869507381309
+    "heap": 84147.36842105263,
+    "duration": 0.0001152076256653087
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "rect",
     "calls": 1000,
-    "heap": 571784.9411764706,
-    "duration": 0.0010870812726632114
+    "heap": 570036,
+    "duration": 0.0010339313295597485
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "rect",
     "calls": 10000,
-    "heap": 5400632,
-    "duration": 0.013819620392857142
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "rect",
-    "calls": 1,
-    "heap": 30641.684210526317,
-    "duration": 0.0000014151374729357675
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "rect",
-    "calls": 10,
-    "heap": 37207.15789473684,
-    "duration": 0.000009670497476969992
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "rect",
-    "calls": 100,
-    "heap": 83323.78947368421,
-    "duration": 0.0000920311657628785
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "rect",
-    "calls": 1000,
-    "heap": 568582.6666666666,
-    "duration": 0.0009229507244202228
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "rect",
-    "calls": 10000,
-    "heap": 5413880,
-    "duration": 0.01110005325
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "rect",
-    "calls": 1,
-    "heap": 201523.36842105264,
-    "duration": 0.0000018636287182564047
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "rect",
-    "calls": 10,
-    "heap": 36225.09090909091,
-    "duration": 0.000010300501382478078
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "rect",
-    "calls": 100,
-    "heap": 84168.94117647059,
-    "duration": 0.00010847260168165262
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "rect",
-    "calls": 1000,
-    "heap": 568800.4444444445,
-    "duration": 0.0009665465647399421
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "rect",
-    "calls": 10000,
-    "heap": 5424369.5,
-    "duration": 0.01106803182857143
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "rect",
-    "calls": 1,
-    "heap": 204053.47368421053,
-    "duration": 0.000002246694977176926
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "rect",
-    "calls": 10,
-    "heap": 36630.73684210526,
-    "duration": 0.000012700735466067302
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "rect",
-    "calls": 100,
-    "heap": 77457.41176470589,
-    "duration": 0.0001280875893394338
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "rect",
-    "calls": 1000,
-    "heap": 505717.77777777775,
-    "duration": 0.0011636203910357732
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "rect",
-    "calls": 10000,
-    "heap": 4781193.411764706,
-    "duration": 0.010313828792857142
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "rect",
-    "calls": 1,
-    "heap": 190928,
-    "duration": 0.000002110737580168029
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "rect",
-    "calls": 10,
-    "heap": 37504.4,
-    "duration": 0.000011258517497411495
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "rect",
-    "calls": 100,
-    "heap": 83833.88235294117,
-    "duration": 0.00011672247251658151
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "rect",
-    "calls": 1000,
-    "heap": 554304,
-    "duration": 0.001049502991534537
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "rect",
-    "calls": 10000,
-    "heap": 5264933,
-    "duration": 0.010431336114285714
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "rect",
-    "calls": 1,
-    "heap": 196694.73684210525,
-    "duration": 0.0000021241913214158865
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "rect",
-    "calls": 10,
-    "heap": 37263.57894736842,
-    "duration": 0.000011978432692198202
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "rect",
-    "calls": 100,
-    "heap": 84656,
-    "duration": 0.0001239472221796809
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "rect",
-    "calls": 1000,
-    "heap": 570888.5333333333,
-    "duration": 0.0010984242271428572
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "rect",
-    "calls": 10000,
-    "heap": 5427503.466666667,
-    "duration": 0.010992526328571428
+    "heap": 5423788.8,
+    "duration": 0.01215091786904762
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "bezierCurveTo",
     "calls": 1,
-    "heap": 190107.2,
-    "duration": 5.19459692863124e-7
+    "heap": 176002.54545454544,
+    "duration": 4.942517229931404e-7
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "bezierCurveTo",
     "calls": 10,
-    "heap": 35888.76190476191,
-    "duration": 0.000003123525632136778
+    "heap": 35776.36363636364,
+    "duration": 0.000002911218888063588
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "bezierCurveTo",
     "calls": 100,
-    "heap": 78919.15789473684,
-    "duration": 0.00003788999437410856
+    "heap": 78506.94736842105,
+    "duration": 0.00003199803609810577
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "bezierCurveTo",
     "calls": 1000,
-    "heap": 516541.4736842105,
-    "duration": 0.00036071277765949427
+    "heap": 514547.2,
+    "duration": 0.00031857134737076575
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "bezierCurveTo",
     "calls": 10000,
-    "heap": 4873264,
-    "duration": 0.00428978084418146
+    "heap": 4873176,
+    "duration": 0.003933344637362638
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "bezierCurveTo",
+    "calls": 1,
+    "heap": 235418.2857142857,
+    "duration": 5.619405392250227e-7
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "bezierCurveTo",
+    "calls": 10,
+    "heap": 34783.666666666664,
+    "duration": 0.000003084104423700963
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "bezierCurveTo",
+    "calls": 100,
+    "heap": 75653.77777777778,
+    "duration": 0.00003381776634264884
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "bezierCurveTo",
+    "calls": 1000,
+    "heap": 509714.1818181818,
+    "duration": 0.00031780063476998546
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "bezierCurveTo",
+    "calls": 10000,
+    "heap": 4846078,
+    "duration": 0.004790720246753246
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "bezierCurveTo",
+    "calls": 1,
+    "heap": 32751.272727272728,
+    "duration": 9.939781136852654e-7
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "bezierCurveTo",
+    "calls": 10,
+    "heap": 35640.76190476191,
+    "duration": 0.0000034037265350908167
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "bezierCurveTo",
+    "calls": 100,
+    "heap": 78857.41176470589,
+    "duration": 0.00003615035278652147
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "bezierCurveTo",
+    "calls": 1000,
+    "heap": 514501.2,
+    "duration": 0.0003196936000809712
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "bezierCurveTo",
+    "calls": 10000,
+    "heap": 4873239,
+    "duration": 0.004938502571428571
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "bezierCurveTo",
+    "calls": 1,
+    "heap": 261634.94736842104,
+    "duration": 0.0000013000194638650695
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "bezierCurveTo",
+    "calls": 10,
+    "heap": 37845.6,
+    "duration": 0.000005241646691169139
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "bezierCurveTo",
+    "calls": 100,
+    "heap": 74908.23529411765,
+    "duration": 0.000053368185247066155
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "bezierCurveTo",
+    "calls": 1000,
+    "heap": 470393.6,
+    "duration": 0.000489197913344737
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "bezierCurveTo",
+    "calls": 10000,
+    "heap": 4437200.5,
+    "duration": 0.006857591964285715
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "bezierCurveTo",
+    "calls": 1,
+    "heap": 36079.11111111111,
+    "duration": 0.0000012850004691254518
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "bezierCurveTo",
+    "calls": 10,
+    "heap": 39360,
+    "duration": 0.000005039270172922351
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "bezierCurveTo",
+    "calls": 100,
+    "heap": 79819,
+    "duration": 0.00005229884209431931
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "bezierCurveTo",
+    "calls": 1000,
+    "heap": 516592.4210526316,
+    "duration": 0.0004889418193045148
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "bezierCurveTo",
+    "calls": 10000,
+    "heap": 4865968.444444444,
+    "duration": 0.006887369205357144
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "bezierCurveTo",
+    "calls": 1,
+    "heap": 260135.57894736843,
+    "duration": 0.0000013186416328101989
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "bezierCurveTo",
+    "calls": 10,
+    "heap": 36768,
+    "duration": 0.00000514236739325544
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "bezierCurveTo",
+    "calls": 100,
+    "heap": 80057.5,
+    "duration": 0.000051959891383142186
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "bezierCurveTo",
+    "calls": 1000,
+    "heap": 512146.94736842107,
+    "duration": 0.00047132837072875973
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "bezierCurveTo",
+    "calls": 10000,
+    "heap": 4840992,
+    "duration": 0.0068963295
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "bezierCurveTo",
     "calls": 1,
-    "heap": 235217.90476190476,
-    "duration": 5.576846380433812e-7
+    "heap": 33266.8,
+    "duration": 4.791464588147315e-7
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "bezierCurveTo",
     "calls": 10,
-    "heap": 35369.818181818184,
-    "duration": 0.000003902295079287705
+    "heap": 35360,
+    "duration": 0.000003660897827170036
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "bezierCurveTo",
     "calls": 100,
-    "heap": 79580.23529411765,
-    "duration": 0.000043221339786748066
+    "heap": 78491.78947368421,
+    "duration": 0.00003590104397477761
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "bezierCurveTo",
     "calls": 1000,
-    "heap": 512870.7368421053,
-    "duration": 0.0004212318992891151
+    "heap": 517030.4,
+    "duration": 0.0003863645445134575
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "bezierCurveTo",
     "calls": 10000,
-    "heap": 4844605.647058823,
-    "duration": 0.004876063402597402
+    "heap": 4868982.588235294,
+    "duration": 0.004747062571969696
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "bezierCurveTo",
     "calls": 1,
-    "heap": 32666.8,
-    "duration": 0.0000017673663393473114
+    "heap": 258598.31578947368,
+    "duration": 0.0000017197650893337049
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "bezierCurveTo",
     "calls": 10,
-    "heap": 32663.11111111111,
-    "duration": 0.0000066871689714497875
+    "heap": 31154,
+    "duration": 0.000006526248156611175
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "bezierCurveTo",
     "calls": 100,
-    "heap": 58766.5,
-    "duration": 0.00006779098474665026
+    "heap": 59523,
+    "duration": 0.00006382810874380193
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "bezierCurveTo",
     "calls": 1000,
-    "heap": 272171.7894736842,
-    "duration": 0.0006051405145969374
+    "heap": 274363.7894736842,
+    "duration": 0.0005741852117741455
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "bezierCurveTo",
     "calls": 10000,
-    "heap": 2465810,
-    "duration": 0.008741728511904762
+    "heap": 2466085,
+    "duration": 0.008616375833333332
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "bezierCurveTo",
     "calls": 1,
-    "heap": 248731.6,
-    "duration": 0.0000017903947119112213
+    "heap": 273963.1111111111,
+    "duration": 0.0000018141272281543428
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "bezierCurveTo",
     "calls": 10,
-    "heap": 36256,
-    "duration": 0.000006709357015747536
+    "heap": 37477.05263157895,
+    "duration": 0.000006432376048478065
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "bezierCurveTo",
     "calls": 100,
-    "heap": 75406.5,
-    "duration": 0.00006652774151072205
+    "heap": 73887.55555555556,
+    "duration": 0.000053208927305961296
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "bezierCurveTo",
     "calls": 1000,
-    "heap": 471532,
-    "duration": 0.0005650076715268803
+    "heap": 476342.93333333335,
+    "duration": 0.000545483487517337
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "bezierCurveTo",
     "calls": 10000,
-    "heap": 4430749,
-    "duration": 0.009750641630952381
+    "heap": 4475068.266666667,
+    "duration": 0.008837789663265306
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "bezierCurveTo",
     "calls": 1,
-    "heap": 31148.88888888889,
-    "duration": 0.000001762044287499442
+    "heap": 287132.23529411765,
+    "duration": 0.0000017226525815322809
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "bezierCurveTo",
     "calls": 10,
-    "heap": 37484.8,
-    "duration": 0.000006662348587556068
+    "heap": 37485.05263157895,
+    "duration": 0.000006162660338239567
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "bezierCurveTo",
     "calls": 100,
-    "heap": 79544,
-    "duration": 0.00006556391418953651
+    "heap": 80334,
+    "duration": 0.00005941652398814786
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "bezierCurveTo",
     "calls": 1000,
-    "heap": 516803.7894736842,
-    "duration": 0.0005753307271244284
+    "heap": 514200.84210526315,
+    "duration": 0.0005384463070116488
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "bezierCurveTo",
     "calls": 10000,
-    "heap": 4859240,
-    "duration": 0.00955181657142857
+    "heap": 4859324.5,
+    "duration": 0.009198432404761906
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "bezierCurveTo",
     "calls": 1,
-    "heap": 258226.94736842104,
-    "duration": 0.000001813679098238795
+    "heap": 273676.44444444444,
+    "duration": 0.0000017265558501386598
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "bezierCurveTo",
     "calls": 10,
-    "heap": 34476,
-    "duration": 0.000006521370332741274
+    "heap": 35007.63636363636,
+    "duration": 0.000006143594719648757
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "bezierCurveTo",
     "calls": 100,
-    "heap": 78302.11764705883,
-    "duration": 0.00006475685052343541
+    "heap": 78807.57894736843,
+    "duration": 0.000052125335414858993
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "bezierCurveTo",
     "calls": 1000,
-    "heap": 511434,
-    "duration": 0.000573935488010156
+    "heap": 517265.06666666665,
+    "duration": 0.000521721962264151
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "bezierCurveTo",
     "calls": 10000,
-    "heap": 4832050.5,
-    "duration": 0.009645305452380954
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "bezierCurveTo",
-    "calls": 1,
-    "heap": 32164.21052631579,
-    "duration": 5.373308790306647e-7
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "bezierCurveTo",
-    "calls": 10,
-    "heap": 39647.5,
-    "duration": 0.000003335836110412713
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "bezierCurveTo",
-    "calls": 100,
-    "heap": 80334.66666666667,
-    "duration": 0.000033303674185811497
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "bezierCurveTo",
-    "calls": 1000,
-    "heap": 516854.4,
-    "duration": 0.0003343538409290096
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "bezierCurveTo",
-    "calls": 10000,
-    "heap": 4863370,
-    "duration": 0.005486500449999999
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "bezierCurveTo",
-    "calls": 1,
-    "heap": 238434.2857142857,
-    "duration": 0.0000010644156388299158
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "bezierCurveTo",
-    "calls": 10,
-    "heap": 35180.63157894737,
-    "duration": 0.000003847035028212023
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "bezierCurveTo",
-    "calls": 100,
-    "heap": 80133.64705882352,
-    "duration": 0.00004179682635893094
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "bezierCurveTo",
-    "calls": 1000,
-    "heap": 514624.8888888889,
-    "duration": 0.00036361928230119634
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "bezierCurveTo",
-    "calls": 10000,
-    "heap": 4864245.176470588,
-    "duration": 0.005613869724603175
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "bezierCurveTo",
-    "calls": 1,
-    "heap": 261800,
-    "duration": 0.0000014410941107492287
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "bezierCurveTo",
-    "calls": 10,
-    "heap": 36004.95238095238,
-    "duration": 0.000005674164081010338
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "bezierCurveTo",
-    "calls": 100,
-    "heap": 74799.11111111111,
-    "duration": 0.0000526457360618316
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "bezierCurveTo",
-    "calls": 1000,
-    "heap": 475922.6666666667,
-    "duration": 0.0005249078744993325
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "bezierCurveTo",
-    "calls": 10000,
-    "heap": 4471748.5,
-    "duration": 0.007478685551020409
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "bezierCurveTo",
-    "calls": 1,
-    "heap": 265128.4210526316,
-    "duration": 0.0000014432955989240733
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "bezierCurveTo",
-    "calls": 10,
-    "heap": 36772.8,
-    "duration": 0.0000057002879953361595
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "bezierCurveTo",
-    "calls": 100,
-    "heap": 80115.76470588235,
-    "duration": 0.000059223790243284627
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "bezierCurveTo",
-    "calls": 1000,
-    "heap": 514616.8888888889,
-    "duration": 0.0005224977292951939
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "bezierCurveTo",
-    "calls": 10000,
-    "heap": 4870395.294117647,
-    "duration": 0.0077068700918367355
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "bezierCurveTo",
-    "calls": 1,
-    "heap": 240039.2380952381,
-    "duration": 0.0000014034408117131248
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "bezierCurveTo",
-    "calls": 10,
-    "heap": 34781.333333333336,
-    "duration": 0.000005457755857830536
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "bezierCurveTo",
-    "calls": 100,
-    "heap": 76427.78947368421,
-    "duration": 0.00005054393658170058
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "bezierCurveTo",
-    "calls": 1000,
-    "heap": 516902.4,
-    "duration": 0.0005145965795918366
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "bezierCurveTo",
-    "calls": 10000,
-    "heap": 4876288.533333333,
-    "duration": 0.007900445193877552
+    "heap": 4876555.2,
+    "duration": 0.008589196836734692
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "arcTo",
     "calls": 1,
-    "heap": 287224.9411764706,
-    "duration": 8.551894371719734e-7
+    "heap": 275698.22222222225,
+    "duration": 8.348752985106107e-7
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "arcTo",
     "calls": 10,
-    "heap": 36940.72727272727,
-    "duration": 0.000008377254621700527
+    "heap": 38721.52380952381,
+    "duration": 0.000007714188088317734
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "arcTo",
     "calls": 100,
-    "heap": 70264.94117647059,
-    "duration": 0.00009352920662277472
+    "heap": 71685.77777777778,
+    "duration": 0.0000846354130024699
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "arcTo",
     "calls": 1000,
-    "heap": 434152.44444444444,
-    "duration": 0.0008406617193207032
+    "heap": 429898.6666666667,
+    "duration": 0.0007377311207591443
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "arcTo",
     "calls": 10000,
-    "heap": 4055847,
-    "duration": 0.012059293628571428
+    "heap": 4056054.5,
+    "duration": 0.01100235997142857
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "arcTo",
+    "calls": 1,
+    "heap": 228131.11111111112,
+    "duration": 9.209207142114138e-7
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "arcTo",
+    "calls": 10,
+    "heap": 34152,
+    "duration": 0.000007845436236030921
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "arcTo",
+    "calls": 100,
+    "heap": 70619.76470588235,
+    "duration": 0.00008739859333956192
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "arcTo",
+    "calls": 1000,
+    "heap": 428994.1052631579,
+    "duration": 0.0007771251690250049
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "arcTo",
+    "calls": 10000,
+    "heap": 4037674.5,
+    "duration": 0.011074609414285714
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "arcTo",
+    "calls": 1,
+    "heap": 38978.8,
+    "duration": 0.0000018618301438363043
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "arcTo",
+    "calls": 10,
+    "heap": 37209.90476190476,
+    "duration": 0.000008089768976239864
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "arcTo",
+    "calls": 100,
+    "heap": 72834.82352941176,
+    "duration": 0.00008640651358330375
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "arcTo",
+    "calls": 1000,
+    "heap": 429941.71428571426,
+    "duration": 0.0007694528999122038
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "arcTo",
+    "calls": 10000,
+    "heap": 4059411,
+    "duration": 0.010960154157142857
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "arcTo",
+    "calls": 1,
+    "heap": 197937.52380952382,
+    "duration": 0.0000022122468839146513
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "arcTo",
+    "calls": 10,
+    "heap": 37232.76190476191,
+    "duration": 0.000009792660547586184
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "arcTo",
+    "calls": 100,
+    "heap": 67323.55555555556,
+    "duration": 0.00009650849531172956
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "arcTo",
+    "calls": 1000,
+    "heap": 393639.55555555556,
+    "duration": 0.0008787284448275861
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "arcTo",
+    "calls": 10000,
+    "heap": 3636115,
+    "duration": 0.010435554285714283
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "arcTo",
+    "calls": 1,
+    "heap": 30738,
+    "duration": 0.0000022383500405921883
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "arcTo",
+    "calls": 10,
+    "heap": 37218.94736842105,
+    "duration": 0.00000976782661384127
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "arcTo",
+    "calls": 100,
+    "heap": 71881.5,
+    "duration": 0.00009676208409899793
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "arcTo",
+    "calls": 1000,
+    "heap": 431558.7368421053,
+    "duration": 0.0008534433940274415
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "arcTo",
+    "calls": 10000,
+    "heap": 4060379,
+    "duration": 0.010379684226190474
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "arcTo",
+    "calls": 1,
+    "heap": 217229.47368421053,
+    "duration": 0.000002238816104770166
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "arcTo",
+    "calls": 10,
+    "heap": 37828,
+    "duration": 0.000009734788668540938
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "arcTo",
+    "calls": 100,
+    "heap": 69375.55555555556,
+    "duration": 0.00009660619098207765
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "arcTo",
+    "calls": 1000,
+    "heap": 432709.3333333333,
+    "duration": 0.0008751205356149499
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "arcTo",
+    "calls": 10000,
+    "heap": 4037271,
+    "duration": 0.010378980114285714
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "arcTo",
     "calls": 1,
-    "heap": 238280.9411764706,
-    "duration": 8.958821174233707e-7
+    "heap": 32380,
+    "duration": 9.385068050744121e-7
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "arcTo",
     "calls": 10,
-    "heap": 35434.94736842105,
-    "duration": 0.000008872695461652115
+    "heap": 35732.63157894737,
+    "duration": 0.00000801977488679576
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "arcTo",
     "calls": 100,
-    "heap": 71109.5,
-    "duration": 0.00009884915207575547
+    "heap": 70334.73684210527,
+    "duration": 0.00008218708243861653
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "arcTo",
     "calls": 1000,
-    "heap": 430892.44444444444,
-    "duration": 0.0009192803086674367
+    "heap": 434742.93333333335,
+    "duration": 0.000808929824489796
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "arcTo",
     "calls": 10000,
-    "heap": 4033018.8235294116,
-    "duration": 0.01235337075714286
+    "heap": 4056736.533333333,
+    "duration": 0.01180854407692308
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "arcTo",
     "calls": 1,
-    "heap": 35170.52631578947,
-    "duration": 0.0000033311206522841598
+    "heap": 203857.6,
+    "duration": 0.000003546867860973745
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "arcTo",
     "calls": 10,
-    "heap": 31564.21052631579,
-    "duration": 0.000015848537946408567
+    "heap": 30870.4,
+    "duration": 0.0000156010770900682
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "arcTo",
     "calls": 100,
-    "heap": 48382.666666666664,
-    "duration": 0.00014953032283705195
+    "heap": 51248.42105263158,
+    "duration": 0.0001442553600650397
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "arcTo",
     "calls": 1000,
-    "heap": 190356,
-    "duration": 0.001431444966055341
+    "heap": 194146.82352941178,
+    "duration": 0.0013455001560150376
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "arcTo",
     "calls": 10000,
-    "heap": 1656232.5333333334,
-    "duration": 0.019689147523809524
+    "heap": 1657449.142857143,
+    "duration": 0.019183164
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "arcTo",
     "calls": 1,
-    "heap": 236881.41176470587,
-    "duration": 0.0000027111762029709787
+    "heap": 236105.41176470587,
+    "duration": 0.0000027706558744742197
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "arcTo",
     "calls": 10,
-    "heap": 35224,
-    "duration": 0.000011359604406828007
+    "heap": 34601.77777777778,
+    "duration": 0.000010815903831728028
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "arcTo",
     "calls": 100,
-    "heap": 70123.76470588235,
-    "duration": 0.00011132164770374554
+    "heap": 72308.70588235294,
+    "duration": 0.00010400901735410538
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "arcTo",
     "calls": 1000,
-    "heap": 396863.55555555556,
-    "duration": 0.0010135512139969835
+    "heap": 397676.26666666666,
+    "duration": 0.0009194975446428574
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "arcTo",
     "calls": 10000,
-    "heap": 3636926.5,
-    "duration": 0.015426341535714287
+    "heap": 3659944,
+    "duration": 0.01446305025
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "arcTo",
     "calls": 1,
-    "heap": 32064,
-    "duration": 0.000002843157855002496
+    "heap": 202849.2,
+    "duration": 0.000002835217353272821
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "arcTo",
     "calls": 10,
-    "heap": 36724.21052631579,
-    "duration": 0.000011121280031085747
+    "heap": 35730.94736842105,
+    "duration": 0.000010553833186697135
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "arcTo",
     "calls": 100,
-    "heap": 75232,
-    "duration": 0.00011128660367432413
+    "heap": 75948,
+    "duration": 0.00010391336439181673
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "arcTo",
     "calls": 1000,
-    "heap": 434342.3157894737,
-    "duration": 0.0009933213898072927
+    "heap": 432878.22222222225,
+    "duration": 0.0009336859645946645
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "arcTo",
     "calls": 10000,
-    "heap": 4057229.5,
-    "duration": 0.015086644321428574
+    "heap": 4057793.066666667,
+    "duration": 0.0143805495
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "arcTo",
     "calls": 1,
-    "heap": 239408.9411764706,
-    "duration": 0.0000029696779098307427
+    "heap": 225569.77777777778,
+    "duration": 0.0000027661484518814726
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "arcTo",
     "calls": 10,
-    "heap": 34390.181818181816,
-    "duration": 0.000011104454165995872
+    "heap": 34820,
+    "duration": 0.000010586316634024393
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "arcTo",
     "calls": 100,
-    "heap": 74441.88235294117,
-    "duration": 0.00010873524608070357
+    "heap": 75785.5,
+    "duration": 0.00010358395934346615
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "arcTo",
     "calls": 1000,
-    "heap": 433786.82352941175,
-    "duration": 0.0010043728900929643
+    "heap": 434869.86666666664,
+    "duration": 0.0009083903962053571
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "arcTo",
     "calls": 10000,
-    "heap": 4035692.5,
-    "duration": 0.015562817523809525
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "arcTo",
-    "calls": 1,
-    "heap": 33180.36363636364,
-    "duration": 0.0000012325747481648866
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "arcTo",
-    "calls": 10,
-    "heap": 36076,
-    "duration": 0.00000830412893471411
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "arcTo",
-    "calls": 100,
-    "heap": 69650.66666666667,
-    "duration": 0.00008225424573185824
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "arcTo",
-    "calls": 1000,
-    "heap": 434654.4,
-    "duration": 0.0008188695714285713
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "arcTo",
-    "calls": 10000,
-    "heap": 4060248.533333333,
-    "duration": 0.011798465357142855
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "arcTo",
-    "calls": 1,
-    "heap": 207318.4,
-    "duration": 0.0000019164394780303215
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "arcTo",
-    "calls": 10,
-    "heap": 35936.8,
-    "duration": 0.000009100939505199762
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "arcTo",
-    "calls": 100,
-    "heap": 72621.77777777778,
-    "duration": 0.00009309381864799457
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "arcTo",
-    "calls": 1000,
-    "heap": 433740.23529411765,
-    "duration": 0.0008291445897676093
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "arcTo",
-    "calls": 10000,
-    "heap": 4057644,
-    "duration": 0.011807105157142856
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "arcTo",
-    "calls": 1,
-    "heap": 222633.77777777778,
-    "duration": 0.0000024096494882183856
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "arcTo",
-    "calls": 10,
-    "heap": 38078.73684210526,
-    "duration": 0.000010414692654244324
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "arcTo",
-    "calls": 100,
-    "heap": 67083,
-    "duration": 0.00010969303654579266
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "arcTo",
-    "calls": 1000,
-    "heap": 397313.6,
-    "duration": 0.000942499168618267
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "arcTo",
-    "calls": 10000,
-    "heap": 3658521.6,
-    "duration": 0.01123335637142857
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "arcTo",
-    "calls": 1,
-    "heap": 213538.1052631579,
-    "duration": 0.000002515494435186375
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "arcTo",
-    "calls": 10,
-    "heap": 35435.6,
-    "duration": 0.000010541102293628362
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "arcTo",
-    "calls": 100,
-    "heap": 71984.4705882353,
-    "duration": 0.00010918822081660696
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "arcTo",
-    "calls": 1000,
-    "heap": 431702.4,
-    "duration": 0.0009471518016418106
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "arcTo",
-    "calls": 10000,
-    "heap": 4058785.5,
-    "duration": 0.011098633357142855
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "arcTo",
-    "calls": 1,
-    "heap": 189069.81818181818,
-    "duration": 0.0000024888262518416884
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "arcTo",
-    "calls": 10,
-    "heap": 35119.57894736842,
-    "duration": 0.000010322314050238274
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "arcTo",
-    "calls": 100,
-    "heap": 71490,
-    "duration": 0.00010903643789813062
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "arcTo",
-    "calls": 1000,
-    "heap": 434533.3333333333,
-    "duration": 0.0009200259736263736
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "arcTo",
-    "calls": 10000,
-    "heap": 4061493.3333333335,
-    "duration": 0.010989959942857142
+    "heap": 4058255.466666667,
+    "duration": 0.014176023375000001
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "arc",
     "calls": 1,
-    "heap": 194483.42857142858,
-    "duration": 8.393874180716121e-7
+    "heap": 226240.88888888888,
+    "duration": 7.576535549622e-7
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "arc",
     "calls": 10,
-    "heap": 37064.4,
-    "duration": 0.0000066016306100674335
+    "heap": 38738.666666666664,
+    "duration": 0.00000630314884276429
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "arc",
     "calls": 100,
-    "heap": 81875.11111111111,
-    "duration": 0.00008020107611201666
+    "heap": 80881.88235294117,
+    "duration": 0.00007146795742711313
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "arc",
     "calls": 1000,
-    "heap": 513829.3333333333,
-    "duration": 0.0007680887102860908
+    "heap": 514269.3333333333,
+    "duration": 0.0006686466673345703
   },
   {
     "impl": "path.current.path",
     "digits": null,
     "command": "arc",
     "calls": 10000,
-    "heap": 4858013.5,
-    "duration": 0.011015304985714286
+    "heap": 4858197,
+    "duration": 0.010409862814285716
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "arc",
+    "calls": 1,
+    "heap": 248092.23529411765,
+    "duration": 9.85874563053736e-7
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "arc",
+    "calls": 10,
+    "heap": 41548.57142857143,
+    "duration": 0.000006826438082492133
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "arc",
+    "calls": 100,
+    "heap": 80573.17647058824,
+    "duration": 0.00007396004228359232
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "arc",
+    "calls": 1000,
+    "heap": 511155.2,
+    "duration": 0.0006676526592478563
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": null,
+    "command": "arc",
+    "calls": 10000,
+    "heap": 4845621.647058823,
+    "duration": 0.00947598583095238
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "arc",
+    "calls": 1,
+    "heap": 34633.882352941175,
+    "duration": 0.000001726428201078882
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "arc",
+    "calls": 10,
+    "heap": 37153.90476190476,
+    "duration": 0.000007416004699078808
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "arc",
+    "calls": 100,
+    "heap": 80978.82352941176,
+    "duration": 0.000076261140272646
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "arc",
+    "calls": 1000,
+    "heap": 514395.1111111111,
+    "duration": 0.000677471967841902
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 0,
+    "command": "arc",
+    "calls": 10000,
+    "heap": 4868926,
+    "duration": 0.00949950485897436
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "arc",
+    "calls": 1,
+    "heap": 220826.1052631579,
+    "duration": 0.0000023243434219765064
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "arc",
+    "calls": 10,
+    "heap": 36117.6,
+    "duration": 0.000009385398806611706
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "arc",
+    "calls": 100,
+    "heap": 75769.5,
+    "duration": 0.00009140565794648371
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "arc",
+    "calls": 1000,
+    "heap": 473515.55555555556,
+    "duration": 0.0008212610014542572
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 5,
+    "command": "arc",
+    "calls": 10000,
+    "heap": 4466098,
+    "duration": 0.011265358953846153
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "arc",
+    "calls": 1,
+    "heap": 30082.526315789473,
+    "duration": 0.0000023269193754428375
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "arc",
+    "calls": 10,
+    "heap": 39380.8,
+    "duration": 0.000009179141266140072
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "arc",
+    "calls": 100,
+    "heap": 79894,
+    "duration": 0.00008940927153881563
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "arc",
+    "calls": 1000,
+    "heap": 514352,
+    "duration": 0.0008177939652429278
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 10,
+    "command": "arc",
+    "calls": 10000,
+    "heap": 4855358.933333334,
+    "duration": 0.013530494576923076
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "arc",
+    "calls": 1,
+    "heap": 232448,
+    "duration": 0.000002319207614862603
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "arc",
+    "calls": 10,
+    "heap": 38563.36842105263,
+    "duration": 0.000009348499180993081
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "arc",
+    "calls": 100,
+    "heap": 78765.17647058824,
+    "duration": 0.00009115529430237403
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "arc",
+    "calls": 1000,
+    "heap": 514303.1111111111,
+    "duration": 0.000814579743615479
+  },
+  {
+    "impl": "path.withIf.path",
+    "digits": 15,
+    "command": "arc",
+    "calls": 10000,
+    "heap": 4831418.666666667,
+    "duration": 0.013352848923076924
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "arc",
     "calls": 1,
-    "heap": 220037.05263157896,
-    "duration": 8.466398800132774e-7
+    "heap": 36152,
+    "duration": 8.300845150765112e-7
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "arc",
     "calls": 10,
-    "heap": 34450.666666666664,
-    "duration": 0.00000780306773403359
+    "heap": 35688,
+    "duration": 0.0000074917279918597725
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "arc",
     "calls": 100,
-    "heap": 79167,
-    "duration": 0.00008503437613862655
+    "heap": 78461.09090909091,
+    "duration": 0.00007367779956803981
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "arc",
     "calls": 1000,
-    "heap": 511403.36842105264,
-    "duration": 0.0007649894097020803
+    "heap": 517186.6666666667,
+    "duration": 0.0007652134107142855
   },
   {
     "impl": "path.withFormat.path",
     "digits": null,
     "command": "arc",
     "calls": 10000,
-    "heap": 4835539.5,
-    "duration": 0.011472868957142859
+    "heap": 4860783.466666667,
+    "duration": 0.010806772446153847
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "arc",
     "calls": 1,
-    "heap": 31644.4,
-    "duration": 0.0000035536709371057198
+    "heap": 211552.4,
+    "duration": 0.0000034179994892663803
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "arc",
     "calls": 10,
-    "heap": 30584,
-    "duration": 0.000017366455076820305
+    "heap": 32368.4,
+    "duration": 0.000016040509524966502
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "arc",
     "calls": 100,
-    "heap": 50635.2,
-    "duration": 0.00016529756103268633
+    "heap": 48629.77777777778,
+    "duration": 0.00014468781755729493
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "arc",
     "calls": 1000,
-    "heap": 195398.11764705883,
-    "duration": 0.0016333713531826038
+    "heap": 190813.64705882352,
+    "duration": 0.00146581816122449
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 0,
     "command": "arc",
     "calls": 10000,
-    "heap": 1661989.7142857143,
-    "duration": 0.020980697
+    "heap": 1663238.857142857,
+    "duration": 0.020255257846153844
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "arc",
     "calls": 1,
-    "heap": 218853.05263157896,
-    "duration": 0.000002620621161209139
+    "heap": 207164.4,
+    "duration": 0.0000025305038744198035
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "arc",
     "calls": 10,
-    "heap": 35896.4,
-    "duration": 0.000010411558433965752
+    "heap": 33240,
+    "duration": 0.000010047913407277297
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "arc",
     "calls": 100,
-    "heap": 74241.88235294117,
-    "duration": 0.00010127823762747785
+    "heap": 73925.33333333333,
+    "duration": 0.00009188477670490226
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "arc",
     "calls": 1000,
-    "heap": 473297.77777777775,
-    "duration": 0.0009009291533791375
+    "heap": 473745.3333333333,
+    "duration": 0.0008583278350484262
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 5,
     "command": "arc",
     "calls": 10000,
-    "heap": 4438480,
-    "duration": 0.014343206
+    "heap": 4465612.266666667,
+    "duration": 0.014213598634615384
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "arc",
     "calls": 1,
-    "heap": 28505.739130434784,
-    "duration": 0.0000025947822299850895
+    "heap": 208895.2,
+    "duration": 0.0000024519117861468086
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "arc",
     "calls": 10,
-    "heap": 35421.17647058824,
-    "duration": 0.000010023238361657974
+    "heap": 34836,
+    "duration": 0.000009577374226230162
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "arc",
     "calls": 100,
-    "heap": 78761.88235294117,
-    "duration": 0.00009687461995303926
+    "heap": 81077.17647058824,
+    "duration": 0.00009328255324522419
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "arc",
     "calls": 1000,
-    "heap": 515557.3333333333,
-    "duration": 0.0009071695312345458
+    "heap": 515273.2631578947,
+    "duration": 0.0008519546664414058
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 10,
     "command": "arc",
     "calls": 10000,
-    "heap": 4866844.5,
-    "duration": 0.014129537053571428
+    "heap": 4869296.533333333,
+    "duration": 0.013953816673076923
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "arc",
     "calls": 1,
-    "heap": 219053.8947368421,
-    "duration": 0.000002561666410933867
+    "heap": 230547.11111111112,
+    "duration": 0.000002512173417876669
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "arc",
     "calls": 10,
-    "heap": 36523.36842105263,
-    "duration": 0.000010272533246410584
+    "heap": 35620.705882352944,
+    "duration": 0.000009484668903654482
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "arc",
     "calls": 100,
-    "heap": 77612.88888888889,
-    "duration": 0.0000970969929055943
+    "heap": 81101.17647058824,
+    "duration": 0.00009315979208616563
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "arc",
     "calls": 1000,
-    "heap": 512556.1904761905,
-    "duration": 0.0009003564301168146
+    "heap": 516384,
+    "duration": 0.0008364467165898617
   },
   {
     "impl": "path.withFormat.pathRound",
     "digits": 15,
     "command": "arc",
     "calls": 10000,
-    "heap": 4847631.466666667,
-    "duration": 0.01415188398076923
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "arc",
-    "calls": 1,
-    "heap": 33513.882352941175,
-    "duration": 9.134234050787074e-7
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "arc",
-    "calls": 10,
-    "heap": 35374.90909090909,
-    "duration": 0.000007263322823999865
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "arc",
-    "calls": 100,
-    "heap": 78664.8,
-    "duration": 0.00007527661396912695
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "arc",
-    "calls": 1000,
-    "heap": 516038.4,
-    "duration": 0.0007309952582417583
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": null,
-    "command": "arc",
-    "calls": 10000,
-    "heap": 4856840.5,
-    "duration": 0.011153247842857145
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "arc",
-    "calls": 1,
-    "heap": 222359.57894736843,
-    "duration": 0.0000019430500885631734
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "arc",
-    "calls": 10,
-    "heap": 38977.41176470588,
-    "duration": 0.000008166429614321246
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "arc",
-    "calls": 100,
-    "heap": 79478,
-    "duration": 0.00008632257571216646
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "arc",
-    "calls": 1000,
-    "heap": 516078.7368421053,
-    "duration": 0.0007823448241281572
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 0,
-    "command": "arc",
-    "calls": 10000,
-    "heap": 4860518.4,
-    "duration": 0.011032342307692308
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "arc",
-    "calls": 1,
-    "heap": 203328.7619047619,
-    "duration": 0.0000024837551251791094
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "arc",
-    "calls": 10,
-    "heap": 34910.31578947369,
-    "duration": 0.000010044809726241282
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "arc",
-    "calls": 100,
-    "heap": 74512.4705882353,
-    "duration": 0.00010154150725014733
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "arc",
-    "calls": 1000,
-    "heap": 475281.6,
-    "duration": 0.0008882528472527473
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 5,
-    "command": "arc",
-    "calls": 10000,
-    "heap": 4468568.5,
-    "duration": 0.011629208625
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "arc",
-    "calls": 1,
-    "heap": 209651.6,
-    "duration": 0.000002325851902640576
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "arc",
-    "calls": 10,
-    "heap": 38515.42857142857,
-    "duration": 0.000009457267084912603
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "arc",
-    "calls": 100,
-    "heap": 79621,
-    "duration": 0.00009456359965163107
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "arc",
-    "calls": 1000,
-    "heap": 516927.1111111111,
-    "duration": 0.0008459300396882363
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 10,
-    "command": "arc",
-    "calls": 10000,
-    "heap": 4852318,
-    "duration": 0.01388286725
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "arc",
-    "calls": 1,
-    "heap": 223155.36842105264,
-    "duration": 0.0000024765428612276395
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "arc",
-    "calls": 10,
-    "heap": 37070.857142857145,
-    "duration": 0.000009525191414299725
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "arc",
-    "calls": 100,
-    "heap": 80176,
-    "duration": 0.00009470916484691222
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "arc",
-    "calls": 1000,
-    "heap": 515762.13333333336,
-    "duration": 0.0008282160663983905
-  },
-  {
-    "impl": "path.withIf.path",
-    "digits": 15,
-    "command": "arc",
-    "calls": 10000,
-    "heap": 4855154.133333334,
-    "duration": 0.013887447946428572
+    "heap": 4872530.857142857,
+    "duration": 0.014053034134615384
   }
 ]

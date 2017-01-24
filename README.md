@@ -11,9 +11,7 @@ Quick repo to support the discussion in [this d3-path issue](https://github.com/
 
 ### path
 
-Compare different implementations of d3's `path`, run with: `npm run path`.
-
-**Please checkout the current results on this [interactive chart](https://mindrones.github.io/d3-benchmarks/)**
+Run with: `npm run path` to compare different implementations of d3's `path`.
 
 Tested implementations of `path()`:
 
@@ -105,6 +103,31 @@ Results are saved in `./data/path.json` as a list of objects like:
 - `heap`: heap memory used by the `p` instance after calling the `coommand` `calls` times, in bytes
 - `duration`: mean test execution time, in seconds
 
+#### How to interpret results
+
+Ideally, for a given amount of calls of a certain command (i.e. '3 calls of `moveTo`' meaning `p.moveTo(N,N).moveTo(N,N).moveTo(N,N)`), we should expect this kind of results:
+
+![Ideal results](./doc/images/path_bench_ideal_result.png)
+
+This is because calling a command with no digits always returns the same path string, the longest possible, no matter the chosen implementation, while passing values of `digits` lower than the maximum precision allowed by the platform (see [Number.EPSILON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON)) shortens the returned path string.
+
+For example, assuming `N = 10.1234567890123456` (16 digits):
+
+- `withFormat.path().moveTo(N,N)   => "M10.1234567890123456,10.1234567890123456"`
+- `withFormat.path(15).moveTo(N,N) => "M10.123456789012346,10.123456789012346"`
+- `withFormat.path(10).moveTo(N,N) => "M10.1234567890,10.1234567890"`
+- `withFormat.path(5).moveTo(N,N)  => "M10.12346,10.12346"`
+- `withFormat.path(0).moveTo(N,N)  => "M10,10"`
+
+Hence, increasing digits should lower the used heap as the instance of path has to store a shorter string.
+
+Instead, a certain rounding method speed shouldn't be affected by the amount of digits.
+
+Here's an example of we what get in practice:
+
+![Example](./doc/images/path_bench_example.png)
+
+**You can play with the results using this [interactive chart](https://mindrones.github.io/d3-benchmarks/)**
 
 ### round
 

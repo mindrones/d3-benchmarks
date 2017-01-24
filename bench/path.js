@@ -170,7 +170,7 @@ function exec(command, digits, commandCalls) {
         // shifted of [delta, delta] to get numbers with digits
 
         const delta = 0.1234567890123456
-        initCode += `p.moveTo(${1+delta},${0+delta});`
+        initCode += `p.moveTo(${1 + delta},${0 + delta});`
         let [x1, y1] = [0.5 + delta, 0.5 + delta]
         let y2 = 0 + delta
         let r = 1 / Math.sqrt(2)
@@ -186,11 +186,10 @@ function exec(command, digits, commandCalls) {
     } else if (command === 'arc') {
         // arc with center [1,-1] starting from [0,0] to [2,0] and back
         // shifted of [delta, delta] to get numbers with digits
-        let delta = 0.0123456789
 
+        const delta = 0.1234567890123456
         let [x, y] = [1 + delta, -1 + delta]
         let r = Math.sqrt(2)
-
         afuncAST.expression.body.body.push(
             esprima.parse(initCode),
             ..._.map(_.range(commandCalls), (n) => {
