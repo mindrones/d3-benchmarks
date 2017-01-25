@@ -118,11 +118,11 @@ This is because calling a command with no digits always returns the same path st
 
 For example, assuming `N = 10.1234567890123456` (16 digits):
 
-- `withFormat.path().moveTo(N,N)   => "M10.1234567890123456,10.1234567890123456"`
-- `withFormat.path(15).moveTo(N,N) => "M10.123456789012346,10.123456789012346"`
-- `withFormat.path(10).moveTo(N,N) => "M10.1234567890,10.1234567890"`
-- `withFormat.path(5).moveTo(N,N)  => "M10.12346,10.12346"`
-- `withFormat.path(0).moveTo(N,N)  => "M10,10"`
+- `withFormat.path().moveTo(N,N)        => "M10.1234567890123456,10.1234567890123456"`
+- `withFormat.pathRound(15).moveTo(N,N) => "M10.123456789012346,10.123456789012346"`
+- `withFormat.pathRound(10).moveTo(N,N) => "M10.1234567890,10.1234567890"`
+- `withFormat.pathRound(5).moveTo(N,N)  => "M10.12346,10.12346"`
+- `withFormat.pathRound(0).moveTo(N,N)  => "M10,10"`
 
 Hence, increasing digits should lower the used heap as the instance of path has to store a shorter string, but rounding the input value should increase the execution time.
 

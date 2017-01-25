@@ -114,7 +114,7 @@ _.each(commands, command => {
                             checkOutput(command, digits, calls)()
                         },
                         onError: (event) => {
-                            // FIXME log arrors and save in file
+                            // FIXME log errors and save in file
                             console.log('*************************************')
                             console.log(event)
                             console.log('*************************************')

@@ -202,5 +202,4 @@ Component.prototype.subscribeToState = function(state$) {
             : false
         )
     })
-
 }
