@@ -33,9 +33,9 @@ const implementations = {
     'path.withIf.path': [null, MAXDIGITS],
     'path.withFormat.path': [null],
     'path.withFormat.pathRound': [MAXDIGITS],
-    // 'path.withFormat.pathCoerceRound': [MAXDIGITS],
-    // 'path.withFormat.pathFixed': [MAXDIGITS],
-    // 'path.withFormat.pathCoerceFixed': [MAXDIGITS],
+    'path.withFormat.pathCoerceRound': [MAXDIGITS],
+    'path.withFormat.pathFixed': [MAXDIGITS],
+    'path.withFormat.pathCoerceFixed': [MAXDIGITS]
 }
 
 // vars to accumulate benchmarks data
