@@ -14889,7 +14889,6 @@ Component$1.prototype.subscribeToState = function(state$) {
             : false; }
         );
     });
-
 };
 
 Component$3.prototype.initAxes = function() {
