@@ -1,5 +1,5 @@
 import { default as _ } from 'lodash'
-import * as utils from '../utils'
+import * as utils from '../../utils'
 import { default as Component } from '.'
 
 Object.defineProperty(Component.prototype, 'geometry', {

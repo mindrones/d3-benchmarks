@@ -1,3 +1,4 @@
+import path from 'path'
 import gulp from 'gulp'
 import gutil from 'gulp-util'
 import { rollup } from 'rollup'
@@ -10,7 +11,7 @@ import config from '../config'
 
 gulp.task('logic', () => {
     return rollup({
-        entry: './viz/index.js',
+        entry: './path/index.js',
         external: ['d3', 'lodash'],
         plugins: [
             nodeResolve({
@@ -35,7 +36,10 @@ gulp.task('logic', () => {
             }).code
         )
         .pipe(source('index.js'))
-        .pipe(gulp.dest(config.buildDir).on('error', gutil.log))
+        .pipe(
+            gulp.dest(path.resolve(config.buildDir, 'path'))
+            .on('error', gutil.log)
+        )
     )
     .catch(err => { console.log(err) })
 });
