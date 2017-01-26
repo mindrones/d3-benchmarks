@@ -15374,7 +15374,7 @@ function App$1(options) {
 App$1.prototype.load = function() {
     var this$1 = this;
 
-    this.data$ = Observable.bindNodeCallback(d3.json)('/data/path.json');
+    this.data$ = Observable.bindNodeCallback(d3.json)('../data/path.json');
     this.data$.subscribe(function (data) {
         this$1.controls = new Component$1({
             container: d3.select('#Controls'),
