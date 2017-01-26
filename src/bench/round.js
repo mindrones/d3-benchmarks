@@ -11,7 +11,7 @@ const _ = require('lodash')
 const esprima = require('esprima')
 const escodegen = require('escodegen')
 const benchmark = require('benchmark')
-const d3 = require('../build/bundle')
+const d3 = require('../../build/bundle')
 
 const RESULTS_PATH = './data/rounding.json'
 const N = 10.1234567890123456

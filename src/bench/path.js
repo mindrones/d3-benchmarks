@@ -11,7 +11,7 @@ const _ = require('lodash')
 const esprima = require('esprima')
 const escodegen = require('escodegen')
 const benchmark = require('benchmark');
-const d3 = require('../build/bundle')
+const d3 = require('../../build/bundle')
 
 const RESULTS_PATH = './data/path.json'
 const MAXEXP = 4    // test with 1, 10, 100, ..., 10^MAXEXP command invocations

@@ -3,7 +3,7 @@ import { default as commonjs } from 'rollup-plugin-commonjs'
 import buble from 'rollup-plugin-buble'
 
 export default {
-  entry: 'src/index.js',
+  entry: 'src/implementations/index.js',
   dest: 'build/bundle.js',
   format: 'umd',
   moduleName: 'd3',
