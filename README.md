@@ -5,16 +5,17 @@ Quick repo to support the discussion in [this d3-path issue](https://github.com/
 ## Installation
 
 - `npm install`
-- `npm run build` (always run this after modifying files in `src/`)
+- `npm run build` (always run this after modifying files in `src/implementations`)
 
 ## Benches
 
 ### path
 
-Run with: `npm run path` to compare different implementations of d3's `path`.
-This bench outputs:
-- the **execution time**,
-- the **heap memory** used by the instance of `p` after executing all commands.
+This bench compares different implementations of d3's `path`, saving:
+- **execution time**,
+- **heap memory** used by the instance of `path` after running a command (`moveTo`, etc) `N` times.
+
+Run with: `npm run path`.
 
 #### Implementations of `d3.path()`
 
@@ -88,16 +89,18 @@ This bench outputs:
   },
   ```
 
+#### Results
+
 Results are saved in `./data/path.json` as a list of objects like:
 
 ```js
 {
-    "impl": "path.current.path",
-    "digits": null,
-    "command": "moveTo",
-    "calls": 1,
-    "heap": 46464.64,
-    "duration": 3.170281801295085e-7
+  "impl": "path.current.path",
+  "digits": null,
+  "command": "moveTo",
+  "calls": 1,
+  "heap": 46464.64,
+  "duration": 3.170281801295085e-7
 }
 ```
 
@@ -107,6 +110,8 @@ Results are saved in `./data/path.json` as a list of objects like:
 - `calls`: how many times we invoked the command on the path instance `p`
 - `heap`: heap memory used by the `p` instance after calling the `coommand` `calls` times, in bytes
 - `duration`: mean test execution time, in seconds
+
+**You can explore the results with this [interactive chart](https://mindrones.github.io/d3-benchmarks/)**
 
 #### How to interpret results
 
@@ -129,8 +134,6 @@ Hence, decreasing digits should lower the used heap as the instance of path has 
 Here's an example of we what get in practice:
 
 ![Example](./doc/images/path_bench_example.png)
-
-**You can play with the results using this [interactive chart](https://mindrones.github.io/d3-benchmarks/)**
 
 ### round
 
