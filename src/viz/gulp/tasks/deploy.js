@@ -1,5 +1,6 @@
 import path from 'path'
-import { default as gulp } from 'gulp'
+import gulp from 'gulp'
+import gutil from 'gulp-util'
 import { default as runSequence } from 'run-sequence'
 import { default as ghPages } from 'gulp-gh-pages'
 import { default as options } from '../options'
@@ -12,6 +13,11 @@ gulp.task('commitToGhPages', () => {
     return gulp.src(path.resolve(config.buildDir, '**/*')).pipe( ghPages(opts) )
 })
 
+gulp.task('copyGhPagesIndex', () => {
+    return gulp.src(`./index.html`)
+        .pipe(gulp.dest(config.buildDir).on('error', gutil.log))
+})
+
 gulp.task('deploy', () => {
-    runSequence(['data', 'vendor', 'build'], 'commitToGhPages')
+    runSequence(['data', 'vendor', 'build', 'copyGhPagesIndex'], 'commitToGhPages')
 })
