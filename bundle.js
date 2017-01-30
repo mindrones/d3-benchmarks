@@ -1,7 +1,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (factory((global.d3 = global.d3 || {})));
+  (factory((global.implementations = global.implementations || {})));
 }(this, (function (exports) { 'use strict';
 
 var pi = Math.PI;
@@ -491,9 +491,113 @@ var index = Object.freeze({
 	withIf: withIf
 });
 
+var constant$1 = function(x) {
+  return function constant() {
+    return x;
+  };
+};
+
+function Linear(context) {
+  this._context = context;
+}
+
+Linear.prototype = {
+  areaStart: function() {
+    this._line = 0;
+  },
+  areaEnd: function() {
+    this._line = NaN;
+  },
+  lineStart: function() {
+    this._point = 0;
+  },
+  lineEnd: function() {
+    if (this._line || (this._line !== 0 && this._point === 1)) { this._context.closePath(); }
+    this._line = 1 - this._line;
+  },
+  point: function(x, y) {
+    x = +x, y = +y;
+    switch (this._point) {
+      case 0: this._point = 1; this._line ? this._context.lineTo(x, y) : this._context.moveTo(x, y); break;
+      case 1: this._point = 2; // proceed
+      default: this._context.lineTo(x, y); break;
+    }
+  }
+};
+
+var curveLinear = function(context) {
+  return new Linear(context);
+};
+
+function x(p) {
+  return p[0];
+}
+
+function y(p) {
+  return p[1];
+}
+
+// import {path} from "d3-path";
+var line = function() {
+  var x$$1 = x,
+      y$$1 = y,
+      defined = constant$1(true),
+      context = null,
+      curve = curveLinear,
+      output = null,
+      precision = null;
+
+  function line(data) {
+    var i,
+        n = data.length,
+        d,
+        defined0 = false,
+        buffer;
+
+    if (context == null) { output = curve(buffer = precision === null ? path$2() : pathRound(precision)); }
+
+    for (i = 0; i <= n; ++i) {
+      if (!(i < n && defined(d = data[i], i, data)) === defined0) {
+        if (defined0 = !defined0) { output.lineStart(); }
+        else { output.lineEnd(); }
+      }
+      if (defined0) { output.point(+x$$1(d, i, data), +y$$1(d, i, data)); }
+    }
+
+    if (buffer) { return output = null, buffer + "" || null; }
+  }
+
+  line.precision = function(_) {
+    return arguments.length ? (precision = _, line) : precision;
+  };
+
+  line.x = function(_) {
+    return arguments.length ? (x$$1 = typeof _ === "function" ? _ : constant$1(+_), line) : x$$1;
+  };
+
+  line.y = function(_) {
+    return arguments.length ? (y$$1 = typeof _ === "function" ? _ : constant$1(+_), line) : y$$1;
+  };
+
+  line.defined = function(_) {
+    return arguments.length ? (defined = typeof _ === "function" ? _ : constant$1(!!_), line) : defined;
+  };
+
+  line.curve = function(_) {
+    return arguments.length ? (curve = _, context != null && (output = curve(context)), line) : curve;
+  };
+
+  line.context = function(_) {
+    return arguments.length ? (_ == null ? context = output = null : output = curve(context = _), line) : context;
+  };
+
+  return line;
+};
+
 exports.path = index;
 exports.round = round;
 exports.roundMDN = roundMDN;
+exports.line = line;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

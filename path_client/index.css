@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+}
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.app #Chart {
+  flex: 1;
+}
+.app #Controls {
+  flex: 0 0 275px;
+  margin-right: 0.5em;
+}
+.Chart {
+  width: 100%;
+  height: 100%;
+  padding: 0.5em;
+  font-size: 12px;
+}
+.Chart svg {
+  width: 100%;
+  height: 100%;
+}
+.Chart svg path {
+  fill: none;
+}
+.Controls {
+  width: 100%;
+  height: 100%;
+  padding: 0.25em;
+  font-size: 12px;
+  overflow: auto;
+}
+.Controls .panel {
+  padding: 0.5em;
+  margin-top: 1em;
+  border-radius: 0.4em;
+  background-color: #fafafa;
+}
+.Controls .panel .title {
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  border-bottom: 1px solid grey;
+  margin-bottom: 0.5em;
+  color: #262626;
+}
+.Controls .panel .row {
+  padding: 0.25em 0;
+  display: flex;
+  align-items: center;
+}
+.Controls .panel .row .dot {
+  flex: 0 0 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  margin: 0 0.5em;
+}
+.Controls .panel .row .value {
+  flex: 1;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+}
+.Controls .panel .row .value:hover {
+  background-color: #e6e6e6;
+}
+.Controls .panel .row .value.pinned {
+  background-color: #a6a6a6;
+  color: white;
+}
+.Controls .panel .row .value p {
+  pointer-events: none;
+}
+.Controls .legend {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+}
+.Controls .legend .dot {
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+.Controls .legend .phrase {
+  flex: 1;
+  margin-left: 0.5em;
+}

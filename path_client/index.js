@@ -14677,15 +14677,9 @@ var animationFrame = new AnimationFrameScheduler(AnimationFrameAction);
 Object.defineProperty(Component$1.prototype, 'implColor', {
     get: function () {
         if(_.isUndefined(this._implColor)) {
-            var implementations =
-                _.chain(this.options.data)
-                .groupBy(function (obj) { return obj.impl; })
-                .keys()
-                .value();
-
             var hueScale =
                 d3.scalePoint()
-                .domain(implementations)
+                .domain(this.options.data.impl)
                 .range([0, 300]);
             this._implColor = function (key) { return d3.hsl(hueScale(key), 0.5, 0.5); };
         }
@@ -14708,22 +14702,10 @@ Component$1.prototype.init = function() {
     var panel =
         this.container.selectAll('.panel')
         .data(
-            _.map(['impl', 'digits', 'command'], function (key) { return ({
-                    key: key,
-                    values: _.chain(this$1.options.data)
-                        .groupBy(key)
-                        .keys()
-                        .map(function (value) { return ({
-                            key: key,
-                            value: key === 'digits'
-                                ? value === 'null'
-                                    ? null
-                                    : parseInt(value, 10)
-                                : value
-                        }); })
-                        .value()
-                }); }
-            ),
+            _.map(this.options.data, function (values, key) { return ({
+                key: key,
+                values: _.map(values, function (value) { return ({key: key, value: value}); })
+            }); }),
             function (d) { return d.key; }
         );
 
@@ -14740,7 +14722,7 @@ Component$1.prototype.init = function() {
         .text(function (d) { return ({
             impl: 'Implementation',
             digits: 'Digits',
-            command: 'Command'
+            amountOfPoints: 'Amount of points'
         }[d.key]); });
 
     this.valueDiv =
@@ -14779,10 +14761,7 @@ Component$1.prototype.init = function() {
                             value = d_value + " ( null | digits )";
                             break;
                         case 'withFormat.pathRound':
-                        case 'withFormat.pathCoerceFixed':
-                        case 'withFormat.pathFixed':
-                        case 'withFormat.pathCoerceRound':
-                            value = d_value + " ( digits )";
+                            value = d_value + " ( null | digits )";
                             break;
                         default:
                             break;
@@ -14796,79 +14775,52 @@ Component$1.prototype.init = function() {
         });
 
     this.valueDiv = this.valueDiv.merge(valueEnter);
-
-    /* mini legend */
-
-    var legend = this.container.append('div').attr('class', 'legend');
-
-    legend
-    .append('div').attr('class', 'dot')
-    .append('p').text('N');
-
-    legend
-    .append('div').attr('class', 'phrase')
-    .append('p')
-    .text('N = log10(calls)');
 };
 
 Component$1.prototype.setStateHandler$ = function() {
     this.stateHandler$ = Observable.merge.apply(
-        Observable, _.chain(this.valueDiv.nodes())
-        .map(function (node) { return [
-            Observable.fromEvent(node, 'mouseover')
-            .map(function () { return function (state) {
-                    var d = _.mapValues(d3.select(node).datum(), function (key) { return String(key); });
-                    var update = {};
-                    if (!state[d.key][d.value]) {
-                        update =
-                            _.chain(state)
-                            .cloneDeep()
-                            .pick(d.key)
-                            .mapValues(function (obj) {
-                                obj[d.value] = {pinned: false};
-                                return obj
-                            })
-                            .value();
-                    }
-                    return Object.assign({}, state, update)
-                }; }
-            ),
-            Observable.fromEvent(node, 'click')
-            .map(function () { return function (state) {
-                    var d = _.mapValues(d3.select(node).datum(), function (key) { return String(key); });
-                    var update =
-                        _.chain(state)
-                        .cloneDeep()
-                        .pick(d.key)
-                        .mapValues(function (obj) {
-                            obj[d.value].pinned = !obj[d.value].pinned;
-                            return obj
-                            // return Object.assign(obj[d.value], {pinned: !obj[d.value].pinned})
-                        })
-                        .value();
-                    return Object.assign({}, state, update)
-                }; }
-            ),
-            Observable.fromEvent(node, 'mouseout')
-            .map(function () { return function (state) {
-                    var d = _.mapValues(d3.select(node).datum(), function (key) { return String(key); });
-                    var update = {};
-                    if (!state[d.key][d.value].pinned) {
-                        update =
-                            _.chain(state)
-                            .cloneDeep()
-                            .pick(d.key)
-                            .mapValues(function (obj) { return _.omit(obj, d.value); })
-                            .value();
-                    }
-                    return Object.assign({}, state, update)
-                }; }
-            )
-        ]; })
-        .flatten()
-        .value()
+        Observable, _.map(this.valueDiv.nodes(), function (node) {
+            var d = d3.select(node).datum();
+            return Observable
+                .fromEvent(node, 'click')
+                .map(function () { return function (state) {
+                        var currentImpl = state.impl;
+
+                        var update = _.pick(state, d.key);
+                        update[d.key] = d.value;
+
+                        switch (d.key) {
+                            case 'impl':
+                                switch (d.value) {
+                                    case 'path.current.path':
+                                    case 'path.withFormat.path':
+                                        update.digits = null;
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                break;
+                            case 'digits':
+                                switch (currentImpl) {
+                                    case 'path.current.path':
+                                    case 'path.withFormat.path':
+                                        update.digits = null;
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+
+                        console.log('update', update);
+
+                        return Object.assign({}, state, update)
+                    }; }
+                )
+        })
     );
-    // .share()
 };
 
 Component$1.prototype.getStateHandler$ = function() {
@@ -14879,129 +14831,13 @@ Component$1.prototype.subscribeToState = function(state$) {
     var this$1 = this;
 
     state$.subscribe(function (state) {
+        console.log(state);
+
         this$1.valueDiv.select('.value')
-        .classed('pinned', function (d) { return state[d.key][d.value]
-            && state[d.key][d.value].pinned; }
-        )
-        .classed('hovered', function (d) { return state[d.key][d.value]
-            ? !state[d.key][d.value].pinned
-            : false; }
-        );
+        .classed('pinned', function (d) {
+            return (state[d.key] === d.value)
+        });
     });
-};
-
-Component$3.prototype.initAxes = function() {
-    this.axes = {
-        t: this.g.append('g').attr('class', 'axis x'),
-        m: this.g.append('g').attr('class', 'axis y')
-    };
-
-    // x labels
-    this.tAxisLabel =
-        this.axes.t.append('g')
-        .append('text')
-        .attr('class', 'label');
-    this.tAxisLabel.append('tspan').text('Duration');
-    this.tAxisLabel.append('tspan').text('[ s ]').attr('dx', '0.5em');
-
-    this.tAxisLabelMin = this.axes.t.append('g');
-    this.tAxisLabelMinText =
-        this.tAxisLabelMin.append('text').attr('class', 'label min');
-
-    this.tAxisLabelMax = this.axes.t.append('g');
-    this.tAxisLabelMaxText =
-        this.tAxisLabelMax.append('text').attr('class', 'label max');
-
-    // y labels
-    this.mAxisLabel =
-        this.axes.m.append('g').attr('class', 'label')
-        .append('text');
-    this.mAxisLabel.append('tspan').text('Heap');
-    this.mAxisLabel.append('tspan').text('[ bytes ]').attr('dx', '0.5em');
-
-    this.mAxisLabelMin = this.axes.m.append('g');
-    this.mAxisLabelMinText =
-        this.mAxisLabelMin.append('text').attr('class', 'label min');
-
-    this.mAxisLabelMax = this.axes.t.append('g');
-    this.mAxisLabelMaxText =
-        this.mAxisLabelMax.append('text').attr('class', 'label max');
-};
-
-Component$3.prototype.updateAxes = function() {
-    /* x */
-
-    this.axes.t
-    .attr('transform', ("translate(" + ([0,this.geometry.innerHeight]) + ")"))
-    .call(this.generators.axes.t);
-
-    // dots with low memory values might overlap x axis ticks
-    this.axes.t.selectAll('.tick text')
-        .attr('y', this.geometry.dotRadiusSafety);
-
-    // labels
-    this.tAxisLabel
-        .attr('transform', ("translate(" + ([
-            this.geometry.innerWidth/2,
-            0.65 * this.geometry.padding.bottom
-        ]) + ")"));
-
-    this.tAxisLabelMin
-        .attr('transform', ("translate(" + ([0, 0.65*this.geometry.padding.bottom]) + ")"));
-    this.tAxisLabelMinText
-        .text(this.data.tExtent[0]
-            ? ("|< 1e" + (Math.log10(this.data.tExtent[0]).toFixed(1)))
-            : ''
-        );
-
-    this.tAxisLabelMax
-        .attr('transform', ("translate(" + ([
-            this.geometry.innerWidth,
-            0.65 * this.geometry.padding.bottom]) + ")")
-        );
-    this.tAxisLabelMaxText
-        .text(this.data.tExtent[1]
-            ? ("1e" + (Math.log10(this.data.tExtent[1]).toFixed(1)) + " >|")
-            : ''
-        );
-
-    /* y */
-
-    this.axes.m
-    // .attr('transform', `translate(${[0,this.geometry.innerHeight]})`)
-    .call(this.generators.axes.m);
-
-    // dots with low time values might overlap y axis ticks
-    this.axes.m.selectAll('.tick text')
-    .attr('x', -this.geometry.dotRadiusSafety);
-
-    this.mAxisLabel
-        .attr('transform', ("translate(" + ([
-            -0.65 * this.geometry.padding.left,
-            this.geometry.innerHeight/2
-        ]) + ") rotate(-90)"));
-
-    this.mAxisLabelMin
-        .attr('transform', ("translate(" + ([
-            -0.65 * this.geometry.padding.left,
-            this.geometry.innerHeight
-        ]) + ") rotate(-90)"));
-    this.mAxisLabelMinText
-        .text(this.data.mExtent[0]
-            ? ("|< 1e" + (Math.log10(this.data.mExtent[0]).toFixed(1)))
-            : ''
-        );
-
-    this.mAxisLabelMax
-        .attr('transform', ("translate(" + ([
-            -0.65 * this.geometry.padding.left,
-            -this.geometry.innerHeight
-        ]) + ") rotate(-90)"));
-    this.mAxisLabelMaxText
-        .text(this.data.mExtent[1]
-            ? ("1e" + (Math.log10(this.data.mExtent[1]).toFixed(1)) + " >|")
-            : ''
-        );
 };
 
 Object.defineProperty(Component$3.prototype, 'implColor', {
@@ -15009,7 +14845,7 @@ Object.defineProperty(Component$3.prototype, 'implColor', {
         if(_.isUndefined(this._implColor)) {
             var hueScale =
                 d3.scalePoint()
-                .domain(this.data.allImplementations)
+                .domain(this.options.allImplementations)
                 .range([0, 300]);
             this._implColor = function (key) { return d3.hsl(hueScale(key), 0.5, 0.5); };
         }
@@ -15017,181 +14853,28 @@ Object.defineProperty(Component$3.prototype, 'implColor', {
     }
 });
 
-Component$3.prototype.initCurves = function() {
-    this.trends = this.g.append('g').attr('class', 'trends');
-    this.curves = this.trends.append('g').attr('class', 'curves');
-    this.dots = this.trends.append('g').attr('class', 'dots');
+Component$3.prototype.initCurve = function() {
+    this.path = this.g.append('path');
 };
 
-Component$3.prototype.updateCurves = function() {
-    var this$1 = this;
-
-    /* curves */
-
-    this.curve =
-        this.curves.selectAll('.curve')
-        .data(this.data.curves, function (d) { return d.id; });
-    this.curve.exit().remove();
-
-    var curveEnter = this.curve.enter().append('g').attr('class', 'curve');
-
-    // curve path
-
-    curveEnter.append('path')
-    .attr('id', function (d) { return d.domID; })
-    .style('stroke', function (d) { return this$1.implColor(d.impl); });
-
-    // curve label
-
-    curveEnter
-    .append('text')
-    .attr('dy', -this.geometry.dotRadiusSafety)
-    .style('fill', function (d) { return this$1.implColor(d.impl); })
-    .append('textPath')
-    .attr('startOffset', '90%')
-    .attr('xlink:href', function (d) { return ("#" + (d.domID)); })
-    .text(function (d) { return d.id; });
-
-    this.curve = curveEnter.merge(this.curve);
-
-    // dots with text
-    this.dot = this.dots.selectAll('.dot').data(this.data.points);
-    this.dot.exit().remove();
-    var dotEnter = this.dot.enter().append('g').attr('class', 'dot');
-
-    dotEnter.append('circle');
-    dotEnter.append('text')
-    .text(function (d) { return Math.log10(d.calls); });
-
-    this.dot = dotEnter.merge(this.dot);
-    this.dot.select('circle').style('stroke', function (d) { return this$1.implColor(d.impl); });
-    this.dot.select('text').style('fill', function (d) { return this$1.implColor(d.impl); });
+Component$3.prototype.updateCurve = function() {
+    if (this.stats) {this.stats.begin();}
+    this.path.attr('d', this.line(this.data) + 'Z');
+    if (this.stats) {this.stats.end();}
 };
 
-Component$3.prototype.updateCurvesGeometry = function() {
-    var this$1 = this;
-
-    this.curve
-    .select('path')
-    .attr('d', function (d) {
-        return this$1.generators.line(d.points)
-    });
-
-    this.dot
-    .attr('transform', function (d) { return ("translate(" + ([
-        this$1.scales.t(d.duration),
-        this$1.scales.m(d.heap)
-    ]) + ")"); })
-    .select('circle')
-    .attr('r', this.geometry.dotRadiusFocusFactor * this.geometry.dotRadius);
-};
-
-Component$3.prototype.focusDots = function(focus) {
-    var this$1 = this;
-
-    this.dot
-    .select('circle')
-    .attr('r', function (d) { return (!focus || (d.calls !== focus.calls))
-        ? this$1.geometry.dotRadius
-        : this$1.geometry.dotRadiusFocused; }
-    );
-
-    this.dot
-    .select('text')
-    .attr('font-size', function (d) { return (!focus || (d.calls !== focus.calls))
-        ? null
-        : ((this$1.geometry.dotRadiusFocusFactor) + "em"); }
-    );
-};
-
-Component$3.prototype.connectData = function() {
-    var this$1 = this;
-
-    this.options.data$
-    .map(function (input) {
-        var data = {
-            tExtent: d3.extent(input.items, function (obj) { return obj.duration; }),
-            mExtent: d3.extent(input.items, function (obj) { return obj.heap; })
-        };
-        data.curves =
-            _.chain(input.items)
-            .groupBy(function (obj) { return ((obj.impl.split('.').slice(1).join('.')) + "(" + (obj.digits) + ")." + (obj.command)); })
-            .map(function (points, id) { return ({
-                id: id.replace(/null/g, ''),
-                domID: id.replace(/[().]/g, '_'),
-                impl: points[0].impl,
-                points: points
-            }); })
-            .value();
-        data.points =
-            _.map(input.items, function (obj) { return _.assign(obj, {
-                id: ((obj.impl) + "|" + (obj.digits) + "|" + (obj.command) + "|" + (obj.calls)),
-                impl: obj.impl
-            }); });
-        data.uniquePoints = _.uniqWith(data.points, function (a, b) { return _.isEqual(
-                _.pick(a, 'heap', 'duration'),
-                _.pick(b, 'heap', 'duration')
-            ); }
-        );
-        data.allImplementations = input.allImplementations;
-        return data
-    })
-    .subscribe(function (data) {
-        this$1.data = data;
-        this$1.updateScalesData();
-        this$1.updateGenerators();
-        this$1.updateAxes();
-        this$1.updateSensors();
-        this$1.updateCurves();
-        this$1.updateCurvesGeometry();
-    });
+Component$3.prototype.updateCurveStyle = function() {
+    this.path.attr('stroke', this.implColor(this.sharedState.impl));
 };
 
 Component$3.prototype.setEvents = function() {
     var this$1 = this;
 
-    // internal events
-    this.dispatch =
-        d3.dispatch('focus_changed')
-        .on('focus_changed', function (obj) {this$1.focusDots(obj);});
-
-    // window events
     Observable.fromEvent(window, 'resize')
-    // .debounceTime(20)
     .subscribe(function () {
         this$1.geometry.dirty = true;
         this$1.resize();
     });
-};
-
-Component$3.prototype.initGenerators = function() {
-    var this$1 = this;
-
-    this.generators = {
-        axes: {
-            t: d3.axisBottom(),
-            m: d3.axisLeft()
-        },
-        line: d3.line()
-            .curve(d3.curveNatural)
-            .x(function (d) { return this$1.scales.t(d.duration); })
-            .y(function (d) { return this$1.scales.m(d.heap); }),
-        voronoi: d3.voronoi()
-            .x(function (d) { return this$1.scales.t(d.duration); })
-            .y(function (d) { return this$1.scales.m(d.heap); })
-    };
-};
-
-Component$3.prototype.updateGenerators = function() {
-    this.generators.axes.t
-        .scale(this.scales.t)
-        .tickSize(-this.geometry.innerHeight);
-
-    this.generators.axes.m
-        .scale(this.scales.m)
-        .tickSize(-this.geometry.innerWidth);
-
-    this.generators.voronoi.extent(this.geometry.extent);
 };
 
 var element_get_geometry = function(elem, additionalProps) {
@@ -15207,27 +14890,15 @@ var element_get_geometry = function(elem, additionalProps) {
 
 Object.defineProperty(Component$3.prototype, 'geometry', {
     get: function () {
-        var this$1 = this;
-
         if(!this._geometry) {
             this._geometry = {
                 dirty: true,
                 padding: {top: 20, right: 20, bottom: 60, left: 80},
                 fontSize: element_get_geometry(this.container.node(),
                     ['fontSize']
-                ).fontSize
+                ).fontSize,
+                jiggleRadius: 0.05
             };
-            this._geometry.dotRadius = 0.55 * this._geometry.fontSize;
-            this._geometry.dotRadiusSafety = 1.3 * this._geometry.dotRadius;
-            this._geometry.dotRadiusFocusFactor = 1.5;
-            this._geometry.dotRadiusFocused =
-                this._geometry.dotRadiusFocusFactor * this._geometry.dotRadius;
-
-            this._geometry.padding = _.mapValues(this._geometry.padding, function (n) { return Math.max(n, this$1._geometry.dotRadiusFocused); }
-            );
-            this._geometry.origin = [
-                this.geometry.padding.left,
-                this.geometry.padding.top ];
         }
 
         if (this._geometry.dirty) {
@@ -15261,10 +14932,15 @@ Object.defineProperty(Component$3.prototype, 'geometry', {
                 - this._geometry.padding.top
                 - this._geometry.padding.bottom;
 
-            this._geometry.extent = [
-                [0, 0],
-                [this._geometry.innerWidth, this._geometry.innerHeight]
+            // origin
+            this._geometry.origin = [
+                this._geometry.padding.left + this._geometry.innerWidth / 2,
+                this._geometry.padding.top + this._geometry.innerHeight / 2
             ];
+            this._geometry.radius = Math.min(
+                0.75 * this._geometry.innerWidth / 2,
+                0.75 * this._geometry.innerHeight / 2
+            );
 
             this._geometry.dirty = false;
         }
@@ -15275,28 +14951,43 @@ Object.defineProperty(Component$3.prototype, 'geometry', {
 
 Component$3.prototype.resize = function() {
     this.updateScalesGeometry();
-    this.updateGenerators();
     this.updateSkeletonGeometry();
-    this.updateAxes();
-    this.updateCurvesGeometry();
-    this.updateSensors();
 };
 
 Component$3.prototype.initScales = function() {
     this.scales = {
-        t: d3.scaleLog(),
-        m: d3.scaleLog()
+        x: d3.scaleLinear().domain([0, 1]),
+        y: d3.scaleLinear().domain([0, 1])
     };
 };
 
-Component$3.prototype.updateScalesData = function() {
-    this.scales.t.domain(this.data.tExtent);
-    this.scales.m.domain(this.data.mExtent);
+Component$3.prototype.updateScalesGeometry = function() {
+    this.scales.x.range([0, this.geometry.radius]);
+    this.scales.y.range([0, this.geometry.radius]);
 };
 
-Component$3.prototype.updateScalesGeometry = function() {
-    this.scales.t.range([0, this.geometry.innerWidth]);
-    this.scales.m.range([this.geometry.innerHeight, 0]);
+var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
+
+
+
+
+function createCommonjsModule(fn, module) {
+	return module = { exports: {} }, fn(module, module.exports), module.exports;
+}
+
+var stats_min = createCommonjsModule(function (module, exports) {
+// stats.js - http://github.com/mrdoob/stats.js
+(function(f,e){"object"===typeof exports&&"undefined"!==typeof module?module.exports=e():"function"===typeof undefined&&undefined.amd?undefined(e):f.Stats=e();})(commonjsGlobal,function(){var f=function(){function e(a){c.appendChild(a.dom);return a}function u(a){for(var d=0;d<c.children.length;d++){ c.children[d].style.display=d===a?"block":"none"; }l=a;}var l=0,c=document.createElement("div");c.style.cssText="position:fixed;top:0;left:0;cursor:pointer;opacity:0.9;z-index:10000";c.addEventListener("click",function(a){a.preventDefault();
+u(++l%c.children.length);},!1);var k=(performance||Date).now(),g=k,a=0,r=e(new f.Panel("FPS","#0ff","#002")),h=e(new f.Panel("MS","#0f0","#020"));if(self.performance&&self.performance.memory){ var t=e(new f.Panel("MB","#f08","#201")); }u(0);return{REVISION:16,dom:c,addPanel:e,showPanel:u,begin:function(){k=(performance||Date).now();},end:function(){a++;var c=(performance||Date).now();h.update(c-k,200);if(c>g+1E3&&(r.update(1E3*a/(c-g),100),g=c,a=0,t)){var d=performance.memory;t.update(d.usedJSHeapSize/
+1048576,d.jsHeapSizeLimit/1048576);}return c},update:function(){k=this.end();},domElement:c,setMode:u}};f.Panel=function(e,f,l){var c=Infinity,k=0,g=Math.round,a=g(window.devicePixelRatio||1),r=80*a,h=48*a,t=3*a,v=2*a,d=3*a,m=15*a,n=74*a,p=30*a,q=document.createElement("canvas");q.width=r;q.height=h;q.style.cssText="width:80px;height:48px";var b=q.getContext("2d");b.font="bold "+9*a+"px Helvetica,Arial,sans-serif";b.textBaseline="top";b.fillStyle=l;b.fillRect(0,0,r,h);b.fillStyle=f;b.fillText(e,t,v);
+b.fillRect(d,m,n,p);b.fillStyle=l;b.globalAlpha=.9;b.fillRect(d,m,n,p);return{dom:q,update:function(h,w){c=Math.min(c,h);k=Math.max(k,h);b.fillStyle=l;b.globalAlpha=1;b.fillRect(0,0,r,m);b.fillStyle=f;b.fillText(g(h)+" "+e+" ("+g(c)+"-"+g(k)+")",t,v);b.drawImage(q,d+a,m,n-a,p,d,m,n-a,p);b.fillRect(d+n-a,m,a,p);b.fillStyle=l;b.globalAlpha=.9;b.fillRect(d+n-a,m,a,g((1-h/w)*p));}}};return f});
+});
+
+Component$3.prototype.initStats = function() {
+    this.stats = new stats_min();
+    this.stats.showPanel(1); // 0: fps, 1: ms, 2: mb, 3+: custom
+    document.body.appendChild( this.stats.dom );
 };
 
 Component$3.prototype.initSkeleton = function() {
@@ -15316,46 +15007,88 @@ Component$3.prototype.updateSkeletonGeometry = function() {
         .attr('transform', ("translate(" + (this.geometry.origin) + ")"));
 };
 
-Component$3.prototype.initSensors = function() {
-    this.sensors = this.g.append('g').attr('class', 'sensors');
-};
+/* global implementations */
 
-Component$3.prototype.updateSensors = function() {
+// state {impl, digits, amountOfPoints}
+
+Component$3.prototype.subscribeToState = function() {
     var this$1 = this;
 
-    var polygons =
-        this.generators.voronoi.polygons(this.data.uniquePoints);
+    this.options.state$
+    .map(function (state) {
+        var obj = {
+            state: state,
+            deAngle: 2 * Math.PI / state.amountOfPoints
+        };
+        obj.items = _.map(_.range(state.amountOfPoints), function (n) { return ({
+            x: Math.cos(n * obj.deAngle),
+            y: Math.sin(n * obj.deAngle)
+        }); });
+        return obj
+    })
+    .subscribe(function (obj) {
+        this$1.data = obj.items;
+        this$1.sharedState = obj.state;
 
-    var sensor =
-        this.sensors.selectAll('.sensor').data(polygons);
+        // line
+        switch (this$1.sharedState.impl) {
+            case 'path.current.path':
+                this$1.line = d3.line();
+                break;
+            case 'path.withFormat.path':
+                this$1.line = implementations.line();
+                break;
+            case 'path.withFormat.pathRound':
+                this$1.line = implementations.line();
+                this$1.line.precision(this$1.sharedState.digits);
+                break;
+            default:
+                break;
+        }
 
-    sensor.exit().remove();
-    sensor.enter()
-        .append('path')
-        .attr('class', 'sensor')
-        .on('mouseover', function (d) { this$1.dispatch.call('focus_changed', this$1, d.data); })
-        .on('mouseout', function () { this$1.dispatch.call('focus_changed', this$1, null); })
-        .merge(sensor)
-        .attr('d', function (d) { return 'M' + d.join('L') + 'Z'; });
+        this$1.line
+        .x(function (d) { return this$1.scales.x(d.x + this$1.geometry.jiggleRadius * this$1.cosAngle); })
+        .y(function (d) { return this$1.scales.y(d.y + this$1.geometry.jiggleRadius * this$1.sinAngle); });
+
+        this$1.updateCurveStyle();
+    });
+};
+
+Component$3.prototype.startAnimation = function() {
+    var this$1 = this;
+
+    var angularSpeed = 15;  // degrees/s
+    d3.timer(function (elapsed) {
+        var angle = (angularSpeed * elapsed / 1000) % 360;
+        this$1.cosAngle = Math.cos(angle);
+        this$1.sinAngle = Math.sin(angle);
+        if (this$1.data) {
+            this$1.updateCurve();  // update + stats measurements
+        }
+    });
 };
 
 function Component$3(options) {
     this.name = 'Chart';
     this.options = options;
-
     this.initSkeleton();
     this.updateSkeletonGeometry();
-
     this.initScales();
     this.updateScalesGeometry();
-
-    this.initGenerators();
-    this.initAxes();
-    this.initSensors();
-    this.initCurves();
-
-    this.connectData();
+    this.initCurve();
+    this.initStats();
+    this.startAnimation();
+    this.subscribeToState();
     this.setEvents();
+}
+
+function App$1(options) {
+    this.options = options;
+    this.setSkeleton();
+    this.initControls();
+    this.initState();
+    this.setStateLoopbacks();
+    this.initChart();
 }
 
 App$1.prototype.setSkeleton = function() {
@@ -15364,24 +15097,17 @@ App$1.prototype.setSkeleton = function() {
     appdiv.append('div').attr('id', 'Controls');
 };
 
-function App$1(options) {
-    this.options = options;
-    this.setSkeleton();
-    this.load();
-}
-
-App$1.prototype.load = function() {
-    var this$1 = this;
-
-    this.data$ = Observable.bindNodeCallback(d3.json)('../data/path.json');
-    this.data$.subscribe(function (data) {
-        this$1.controls = new Component$1({
-            container: d3.select('#Controls'),
-            data: data
-        });
-        this$1.initState();
-        this$1.setStateLoopbacks();
-        this$1.initChart();
+App$1.prototype.initControls = function() {
+    this.controls = new Component$1({
+        container: d3.select('#Controls'),
+        data: {
+            impl: [
+                'path.current.path',
+                'path.withFormat.path',
+                'path.withFormat.pathRound' ],
+            digits: [null, 0, 1, 2, 3, 4, 5, 10, 15],
+            amountOfPoints: _.map(_.range(2, 6), function (n) { return Math.pow(10, n); })
+        }
     });
 };
 
@@ -15389,28 +15115,11 @@ App$1.prototype.initState = function() {
     this.state$ =
         this.controls.getStateHandler$()
         .startWith({
-            impl: {
-                'path.current.path': {pinned: true},
-                'path.withIf.path': {pinned: true},
-                'path.withFormat.path': {pinned: true},
-                // 'path.withFormat.pathRound': {pinned: true}
-            },
-            digits: {
-                null: {pinned: true},
-                // 5: {pinned: true}
-            },
-            command: {
-                moveTo: {pinned: true},
-                // lineTo: {pinned: true},
-                // quadraticCurveTo: {pinned: true},
-                // rect: {pinned: true},
-                // bezierCurveTo: {pinned: true},
-                // arcTo: {pinned: true},
-                // arc: {pinned: true}
-            }
+            impl: 'path.withFormat.pathRound',
+            digits: null,
+            amountOfPoints: 100000
         })
         .scan(function (state, handler) { return handler(state); });
-        // .share()
 };
 
 App$1.prototype.setStateLoopbacks = function() {
@@ -15420,28 +15129,11 @@ App$1.prototype.setStateLoopbacks = function() {
 App$1.prototype.initChart = function() {
     new Component$3({
         container: d3.select('#Chart'),
-        data$: Observable.combineLatest(this.state$, this.data$, function (state, data) {
-            var items = data;
-            _.each(state, function (dimObj, dimension) {
-                var values = _.keys(dimObj);
-                if (dimension === 'digits') {
-                    values = _.map(values, function (s) { return s === 'null' ? null : parseInt(s, 10); }
-                    );
-                }
-                items = _.filter(items, function (obj) {
-                    return _.includes(values, obj[dimension])
-                });
-            });
-            return {
-                items: items,
-                allImplementations: _.keys(_.groupBy(data, function (obj) { return obj.impl; }))
-            }
-        })
-        .distinctUntilChanged(function (a, b) { return _.isEqual(a,b); })
-
-        // FIXME fires 2 times as combineLatest subscribe to state$
-        // as the chart does, but chaining `.share()` to `this.state$` won't
-        // draw the curves until we mouseover the options in the control panel..
+        state$: this.state$.distinctUntilChanged(function (a, b) { return _.isEqual(a,b); }),
+        allImplementations: [
+            'path.current.path',
+            'path.withFormat.path',
+            'path.withFormat.pathRound' ]
     });
 };
 
