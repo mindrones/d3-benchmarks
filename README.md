@@ -1,6 +1,6 @@
 # d3 benchmarks
 
-Quick repo to support the discussion in [this d3-path issue](https://github.com/d3/d3-path/issues/10).
+Some tests to support the discussion in [this d3-path issue](https://github.com/d3/d3-path/issues/10).
 
 ## Installation
 
@@ -111,7 +111,7 @@ Results are saved in `./data/path.json` as a list of objects like:
 - `heap`: heap memory used by the `p` instance after calling the `coommand` `calls` times, in bytes
 - `duration`: mean test execution time, in seconds
 
-**You can explore the results with this [interactive chart](https://mindrones.github.io/d3-benchmarks/)**
+**You can explore the results with this [interactive chart](https://mindrones.github.io/d3-benchmarks/path)**
 
 #### How to interpret results
 
@@ -134,6 +134,23 @@ Hence, decreasing digits should lower the used heap as the instance of path has 
 Here's an example of we what get in practice:
 
 ![Example](./doc/images/path_bench_example.png)
+
+#### Let's try this on a real visualization!
+
+This [interactive chart](https://mindrones.github.io/d3-benchmarks/path_client) shows a moving circle that we control via:
+
+- how many points the circle is made of: 1e2, 1e3, 1e4, 1e5;
+- which implementation of `line()` to be used: current official `d3.line()` or custom implementation using `withFormat.path()` (see above);
+- how many digits to be used to round numbers.
+
+At least of my machine:
+- below 1e5 points I see no difference in performance, no matter the implementation or number of digits;
+- using 1e5 points, not rounding would seem ~2x slower than rounding with 0 digits, so there's indeed an effect on performance.
+
+![path_client: withFormat, no rounding ](./doc/images/path_client_withFormat_null.png)
+![path_client: withFormat, rounding with 3 digits](./doc/images/path_client_withFormat_3.png)
+![path_client: withFormat, rounding with 0 digits](./doc/images/path_client_withFormat_0.png)
+
 
 ### round
 
