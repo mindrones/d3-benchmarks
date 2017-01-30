@@ -11,7 +11,7 @@ const _ = require('lodash')
 const esprima = require('esprima')
 const escodegen = require('escodegen')
 const benchmark = require('benchmark')
-const d3 = require('../../build/bundle')
+const bundle = require('../../build/bundle')
 
 const RESULTS_PATH = './data/rounding.json'
 const N = 10.1234567890123456
@@ -113,10 +113,10 @@ function roundingCode(transform, implementation, digits) {
     let code
     switch (implementation) {
         case 'round':
-            code = `d3.round(${transformedN}, ${digits})`
+            code = `bundle.round(${transformedN}, ${digits})`
             break;
         case 'roundMDN':
-            code = `d3.roundMDN(${transformedN}, ${digits})`
+            code = `bundle.roundMDN(${transformedN}, ${digits})`
             break;
         case 'fixed':
             code = `${N}.toFixed(${digits})`

@@ -9,37 +9,39 @@ import source from 'vinyl-source-stream'
 import readableFromString from '../utils/stream_readableFromString'
 import config from '../config'
 
-gulp.task('logic', () => {
-    return rollup({
-        entry: './path/index.js',
-        external: ['d3', 'lodash'],
-        plugins: [
-            nodeResolve({
-                module: true,
-                jsnext: true,
-                main: true,
-                browser: true
-            }),
-            commonjs(),
-            buble()
-        ],
-    }).then(bundle =>
-        readableFromString(
-            bundle.generate({
-                format: 'iife',
-                moduleName: 'index',
-                globals: {
-                    d3: 'd3',
-                    lodash: '_'
-                },
-                banner: '/* https://github.com/mindrones/d3-benchmarks */',
-            }).code
+config.vizDirNames.forEach(dirName => {
+    gulp.task(`logic.${dirName}`, () => {
+        return rollup({
+            entry: `./${dirName}/index.js`,
+            external: ['d3', 'lodash', 'implementations'],
+            plugins: [
+                nodeResolve({
+                    module: true,
+                    jsnext: true,
+                    main: true,
+                    browser: true
+                }),
+                commonjs(),
+                buble()
+            ],
+        }).then(bundle =>
+            readableFromString(
+                bundle.generate({
+                    format: 'iife',
+                    moduleName: 'index',
+                    globals: {
+                        d3: 'd3',
+                        lodash: '_'
+                    },
+                    banner: '/* https://github.com/mindrones/d3-benchmarks */',
+                }).code
+            )
+            .pipe(source('index.js'))
+            .pipe(
+                gulp.dest(path.resolve(config.buildDir, dirName))
+                .on('error', gutil.log)
+            )
         )
-        .pipe(source('index.js'))
-        .pipe(
-            gulp.dest(path.resolve(config.buildDir, 'path'))
-            .on('error', gutil.log)
-        )
-    )
-    .catch(err => { console.log(err) })
-});
+        .catch(err => { console.log(err) })
+    })
+})

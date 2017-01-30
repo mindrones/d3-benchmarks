@@ -6,7 +6,7 @@ export default {
   entry: 'src/implementations/index.js',
   dest: 'build/bundle.js',
   format: 'umd',
-  moduleName: 'd3',
+  moduleName: 'implementations',
   plugins: [
       nodeResolve({
           module: true,

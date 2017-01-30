@@ -103,7 +103,6 @@ Component.prototype.init = function() {
                     value = String(d.value)
             }
             return value
-            // return _.isNull(d.value) ? 'null' : d.value
         })
 
     this.valueDiv = this.valueDiv.merge(valueEnter)
@@ -120,10 +119,6 @@ Component.prototype.init = function() {
     .append('div').attr('class', 'phrase')
     .append('p')
     .text('N = log10(calls)')
-}
-
-Component.prototype.getStateHandler$ = function() {
-    return this.stateHandler$
 }
 
 Component.prototype.setStateHandler$ = function() {
@@ -187,6 +182,10 @@ Component.prototype.setStateHandler$ = function() {
         .value()
     )
     // .share()
+}
+
+Component.prototype.getStateHandler$ = function() {
+    return this.stateHandler$
 }
 
 Component.prototype.subscribeToState = function(state$) {

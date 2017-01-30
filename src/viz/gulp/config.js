@@ -10,4 +10,6 @@ export default {
     buildDir: buildDir,
     buildDataDir: path.resolve(buildDir, 'data/'),
     buildVendorDir: path.resolve(buildDir, 'vendor/'),
+    vizDir: path.resolve(rootDir, 'src/viz/'),
+    vizDirNames: ['path', 'path_client']
 }
