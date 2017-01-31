@@ -15106,7 +15106,25 @@ App$1.prototype.initControls = function() {
                 'path.withFormat.path',
                 'path.withFormat.pathRound' ],
             digits: [null, 0, 1, 2, 3, 4, 5, 10, 15],
-            amountOfPoints: _.map(_.range(2, 6), function (n) { return Math.pow(10, n); })
+            amountOfPoints: [
+                100,
+                1000,
+                10000,
+                20000,
+                30000,
+                40000,
+                50000,
+                60000,
+                70000,
+                80000,
+                90000,
+                100000,
+                200000,
+                300000,
+                400000,
+                500000
+            ]
+            // amountOfPoints: _.map(_.range(2, 6), n => Math.pow(10, n))
         }
     });
 };
